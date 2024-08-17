@@ -1,0 +1,34 @@
+\documentclass{article}
+
+\usepackage{tikz}
+\usepackage{circuitikz}
+
+\begin{document}
+
+\begin{figure}[h!]
+  \begin{center}
+    \begin{circuitikz}
+	    \draw[scale = 0.8] (0,0)
+	    node[label={[font=\footnotesize]above:$A$}] {}
+	to[battery1, l = { $10V$}, color = cyan, /tikz/circuitikz/bipoles/length=70pt] (4,0) 
+	    to[R, l={ $1\Omega$}, color=cyan,/tikz/circuitikz/bipoles/length=70pt] (8,0)
+	    node[label={[font=\footnotesize]right:$C$}] {}
+	    to[R,l ={ $2\Omega$}, color = cyan,/tikz/circuitikz/bipoles/length=70pt] (8,4)
+	    node[label={[font=\footnotesize]above:$B$}] {}
+	    to[R,l={ $4\Omega$}, color = cyan,/tikz/circuitikz/bipoles/length=70pt] (0,0)
+      to[R,l=$4\Omega$, color = cyan,/tikz/circuitikz/bipoles/length=70pt] (8,-4)
+	    node[label={[font=\footnotesize]below:$D$}] {}
+	    to[R,l={$2\Omega$}, color = cyan,/tikz/circuitikz/bipoles/length=70pt] (8,0);
+	    \draw[scale =0.8] (8,-4)
+      to[short] (12,0)
+	    to[battery1,l={$5V$},invert, color = cyan] (12,0.5)
+	    node[label={[font=\footnotesize]above:$\epsilon$}] {}
+      to[short] (8,4);
+\draw[->,shift={(5,1.5)}] (120:.7cm) arc (120:-90:.5cm) node at(0,0){$I_1$};
+  \draw[->,shift={(7.5,0)}] (120:.7cm) arc (120:-90:.7cm) node at(0,0){$I_2$};
+\draw[->,shift={(5,-1.5)}] (120:.7cm) arc (120:-90:.5cm) node at(0,0){$I_3$};
+    \end{circuitikz}
+  \end{center}
+\end{figure}
+
+\end{document}
