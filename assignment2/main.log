@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Arch Linux) (preloaded format=pdflatex 2024.8.11)  20 AUG 2024 17:34
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Arch Linux) (preloaded format=pdflatex 2024.8.11)  20 AUG 2024 17:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1291,38 +1291,37 @@ Package hyperref Info: Link coloring OFF on input line 49.
 \@outlinefile=\write5
 \openout5 = `main.out'.
 
- [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf-dist/fo
-nts/enc/dvips/base/8r.enc}]
 LaTeX Font Info:    Trying to load font information for U+txsya on input line 6
-2.
-
-(/usr/share/texmf-dist/tex/latex/txfonts/utxsya.fd
+1.
+ (/usr/share/texmf-dist/tex/latex/txfonts/utxsya.fd
 File: utxsya.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Trying to load font information for U+txsyb on input line 6
-2.
+1.
 
 (/usr/share/texmf-dist/tex/latex/txfonts/utxsyb.fd
 File: utxsyb.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Trying to load font information for U+txmia on input line 6
-2.
+1.
 
 (/usr/share/texmf-dist/tex/latex/txfonts/utxmia.fd
 File: utxmia.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Trying to load font information for U+txsyc on input line 6
-2.
+1.
 
 (/usr/share/texmf-dist/tex/latex/txfonts/utxsyc.fd
 File: utxsyc.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Trying to load font information for TS1+txr on input line 6
-2.
+1.
 
 (/usr/share/texmf-dist/tex/latex/txfonts/ts1txr.fd
 File: ts1txr.fd 2000/12/15 v3.1
-) [2] [3] [4] (./main.aux)
+) [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf-dist/f
+onts/enc/dvips/base/8r.enc}]
+[2] [3] (./main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2020/03/25>
@@ -1331,23 +1330,23 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 30516 strings out of 474116
- 592462 string characters out of 5750249
+ 30515 strings out of 474116
+ 592456 string characters out of 5750249
  1957187 words of memory out of 5000000
  52150 multiletter control sequences out of 15000+600000
  615284 words of font info for 149 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 101i,14n,103p,1172b,666s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 101i,14n,103p,1172b,662s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb></usr/share/texmf
 -dist/fonts/type1/public/txfonts/rtxr.pfb></usr/share/texmf-dist/fonts/type1/pu
 blic/txfonts/txex.pfb></usr/share/texmf-dist/fonts/type1/public/txfonts/txsy.pf
 b></usr/share/texmf-dist/fonts/type1/public/txfonts/txsyc.pfb></usr/share/texmf
 -dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/t
 imes/utmri8a.pfb>
-Output written on main.pdf (4 pages, 52136 bytes).
+Output written on main.pdf (3 pages, 51927 bytes).
 PDF statistics:
- 143 PDF objects out of 1000 (max. 8388607)
- 121 compressed objects within 2 object streams
- 69 named destinations out of 1000 (max. 500000)
+ 139 PDF objects out of 1000 (max. 8388607)
+ 118 compressed objects within 2 object streams
+ 68 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
