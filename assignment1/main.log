@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Arch Linux) (preloaded format=pdflatex 2024.8.11)  15 AUG 2024 14:50
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Arch Linux) (preloaded format=pdflatex 2024.8.11)  20 AUG 2024 17:29
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -22,6 +22,7 @@ LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 5
 (/usr/share/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
+** ATTENTION: Single column mode is not typically used with IEEE publications.
 -- Using 8.5in x 11in (letter) paper.
 -- Using PDF output.
 \@IEEEnormalsizeunitybaselineskip=\dimen143
@@ -1115,11 +1116,6 @@ Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 (/usr/share/texmf-dist/tex/latex/tools/multicol.sty
 Package: multicol 2023/03/30 v1.9f multicolumn formatting (FMi)
 \c@tracingmulticols=\count356
-
-
-Package multicol Warning: May not work with the twocolumn option on input line 
-143.
-
 \mult@box=\box85
 \multicol@leftmargin=\dimen341
 \c@unbalance=\count357
@@ -1189,7 +1185,8 @@ Package multicol Warning: May not work with the twocolumn option on input line
 )
 LaTeX Font Info:    Trying to load font information for OT1+txr on input line 5
 5.
- (/usr/share/texmf-dist/tex/latex/txfonts/ot1txr.fd
+
+(/usr/share/texmf-dist/tex/latex/txfonts/ot1txr.fd
 File: ot1txr.fd 2000/12/15 v3.1
 ) (./main.aux)
 \openout1 = `main.aux'.
@@ -1343,7 +1340,7 @@ Package hyperref Info: Link coloring OFF on input line 55.
 * \hoffset=0.0pt
 * \voffset=0.0pt
 * \mag=1000
-* \@twocolumntrue
+* \@twocolumnfalse
 * \@twosidefalse
 * \@mparswitchfalse
 * \@reversemarginfalse
@@ -1380,56 +1377,21 @@ LaTeX Font Info:    Trying to load font information for TS1+txr on input line 6
 (/usr/share/texmf-dist/tex/latex/txfonts/ts1txr.fd
 File: ts1txr.fd 2000/12/15 v3.1
 )
-Underfull \hbox (badness 1571) in paragraph at lines 78--80
-[]\OT1/txr/m/n/12 The sides of a tri-an-gle in a given
- []
-
-
-Underfull \hbox (badness 2012) in paragraph at lines 78--80
-\OT1/txr/m/n/12 cir-cle sub-tend an-gles $\OML/txmi/m/it/12 $\OT1/txr/m/n/12 ,
- $\OML/txmi/m/it/12 ^^L$\OT1/txr/m/n/12 , $\OML/txmi/m/it/12 ^^M$\OT1/txr/m/n/1
-2 . The
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 91--93
-[]\OT1/txr/m/n/12 If $\OML/txmi/m/it/12 K \OT1/txr/m/n/12 = [] [] [] [] [] []$
- []
-
-
-Underfull \hbox (badness 3492) in paragraph at lines 91--93
-\OT1/txr/m/n/12 then the nu-mer-i-cal value of $\OML/txmi/m/it/12 K$ \OT1/txr/m
-/n/12 is
- []
-
-
-Underfull \hbox (badness 5893) in paragraph at lines 101--103
-[]\OT1/txr/m/n/12 General value of $\OML/txmi/m/it/12 ^^R$ \OT1/txr/m/n/12 sat-
-is-fy-ing the
- []
-
-
-Underfull \hbox (badness 5817) in paragraph at lines 101--103
-\OT1/txr/m/n/12 equa-tion $[][] \OML/txmi/m/it/12 ^^R \OT1/txr/m/n/12 + [] 2\OM
-L/txmi/m/it/12 ^^R \OT1/txr/m/n/12 = 1$ is
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 214--216
-[]\OT1/txr/m/n/12 The value of the ex-pres-sion
- []
-
-
-Underfull \hbox (badness 5985) in paragraph at lines 214--216
-[] [] \OT1/txr/m/n/12 20\TS1/txr/m/n/12 ° \OMS/txsy/m/n/12 ^^@ [] \OT1/txr/m/n/
-12 20\TS1/txr/m/n/12 °$ \OT1/txr/m/n/12 is equal to
+Overfull \hbox (5.63513pt too wide) in paragraph at lines 106--108
+[]\OT1/txr/m/n/12 The real roots of the equa-tion $[][] \OML/txmi/m/it/12 x \OT
+1/txr/m/n/12 + [][] \OML/txmi/m/it/12 x \OT1/txr/m/n/12 = 1$ in the in-ter-val 
+$[]$ are  $[]$ 
  []
 
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf-dist/fon
-ts/enc/dvips/base/8r.enc}
+ts/enc/dvips/base/8r.enc}]
+Overfull \hbox (22.52321pt too wide) in paragraph at lines 202--204
+[]\OT1/txr/m/n/12 The gen-eral so-lu-tion to the trig-no-met-ric equa-tion $[] 
+\OML/txmi/m/it/12 x \OT1/txr/m/n/12 + [] \OML/txmi/m/it/12 x \OT1/txr/m/n/12 = 
+1$ is given by  $[]$ 
+ []
 
-
-] (./main.aux)
+[2] (./main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2020/03/25>
@@ -1438,13 +1400,13 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 30972 strings out of 474116
- 599466 string characters out of 5750249
- 1977187 words of memory out of 5000000
+ 30973 strings out of 474116
+ 599472 string characters out of 5750249
+ 1967187 words of memory out of 5000000
  52621 multiletter control sequences out of 15000+600000
  617167 words of font info for 152 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 101i,6n,103p,1172b,441s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 101i,6n,103p,1172b,694s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/public/txfonts/rtxbsc.pfb></usr/share/texm
 f-dist/fonts/type1/public/txfonts/rtxmi.pfb></usr/share/texmf-dist/fonts/type1/
 public/txfonts/rtxr.pfb></usr/share/texmf-dist/fonts/type1/public/txfonts/txex.
@@ -1452,10 +1414,10 @@ pfb></usr/share/texmf-dist/fonts/type1/public/txfonts/txsy.pfb></usr/share/texm
 f-dist/fonts/type1/public/txfonts/txsyc.pfb></usr/share/texmf-dist/fonts/type1/
 urw/times/utmb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></
 usr/share/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (1 page, 57984 bytes).
+Output written on main.pdf (2 pages, 57991 bytes).
 PDF statistics:
- 116 PDF objects out of 1000 (max. 8388607)
- 94 compressed objects within 1 object stream
- 46 named destinations out of 1000 (max. 500000)
+ 120 PDF objects out of 1000 (max. 8388607)
+ 97 compressed objects within 1 object stream
+ 47 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
