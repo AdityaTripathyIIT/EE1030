@@ -60,22 +60,21 @@
 
 
 \textbf{Question}:\\
-Show that the points \brak{2, 3, 4}, \brak{–1, –2, 1}, \brak{5, 8, 7} are collinear
+Show that the points \brak{2,3,4}, \brak{-1,-2,1} ,\brak{5,8,7}
 \\
 \textbf{Solution: }\\
 From \brak{1.1.9.1}, Points A, B, C are defined to be collinear if
-\begin{align}
-	rank\myvec{\brak{\vec{B}-\vec{A}}^\top \brak{ \vec{C}-\vec{A}}}^\top = 1\\
+\begin{align} 
+	rank\myvec{\brak{\vec{B}-\vec{A}}^\top \\ \brak{\vec{C}-\vec{A}}^\top } = 1\\
 \end{align}
 So, forming the collinearity matrix and doing row operations,
 \begin{align}
-	\myvec{-3&-5&-5\\3&5&3} \xrightarrow{R_2 = R_2+R_1}  \myvec{-3&-5&-3\\0&0&-2}\\
+	\myvec{-3&-5&-3\\3&5&3} \xrightarrow{R_2 = R_2+R_1}  \myvec{-3&-5&-3\\0&0&0}\\
 \end{align}
-Since there are two non-zero row, rank $= 2$. Hence the points are not collinear.
+Since there is only one non-zero row, rank $= 1$. Hence the points are collinear.
 \begin{figure}[h!]
    \centering
    \includegraphics[width=0.7\linewidth]{figs/fig.png}
-   \caption{Line joining $\vec{A}, \vec{B}$ and $\vec{C}$}
+   \caption{Line joining the three given points}
 \end{figure}
 \end{document}  
-\end{document}

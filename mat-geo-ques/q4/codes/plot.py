@@ -30,6 +30,6 @@ ax.set_zlabel('Z Label')
 ax.set_title('3D Scatter Plot of Random Points and Tetrahedron Vertices')
 
 ax.legend()
-
+plt.savefig('../figs/fig.png')
 plt.show()
 
