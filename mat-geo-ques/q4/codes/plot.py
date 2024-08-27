@@ -1,35 +1,49 @@
+import ctypes
 import numpy as np
 import matplotlib.pyplot as plt
-from mpl_toolkits.mplot3d import Axes3D
 
-points = np.loadtxt('points.txt')
+# Load the C library
+# Replace 'libline_points.so' with 'libline_points.dylib' or 'line_points.dll' as needed
+gen = ctypes.CDLL('./generate.so')
 
-x = points[:, 0]
-y = points[:, 1]
-z = points[:, 2]
+# Define the argument and return types of the C function
+gen.generate_line_points.argtypes = [
+    ctypes.c_double, ctypes.c_double, ctypes.c_double,
+    ctypes.c_double, ctypes.c_double, ctypes.c_double,
+    ctypes.POINTER(ctypes.c_double), ctypes.c_int
+]
 
-v1 = np.array([2.0, 3.0, 4.0])
-v2 = np.array([-1.0, -2.0, 1.0])
-v3 = np.array([5.0, 8.0, 7.0])
+gen.generate_line_points.restype = None
 
+# Define the points on the line
+x1, y1, z1 = 2, 3, 4
+x2, y2, z2 = -1, -2, 1
+x3, y3, z3 = 5, 8 ,7
+# Number of points
+num_points = 1000
+
+# Create an array to hold the points
+points = np.zeros((num_points, 3), dtype=np.double)
+
+# Call the C function
+gen.generate_line_points(
+    x1, y1, z1, x2, y2, z2,
+    points.ctypes.data_as(ctypes.POINTER(ctypes.c_double)),
+    num_points
+)
+
+# Plot the points
 fig = plt.figure()
 ax = fig.add_subplot(111, projection='3d')
+ax.scatter(points[:, 0], points[:, 1], points[:, 2], c='r', marker='o')
+ax.text(x1, y1, z1, ' (2,3,4)', color='red', fontsize=12)
+ax.text(x2, y2, z2, ' (-1,-2,1)', color='green', fontsize=12)
+ax.text(x3, y3, z3, ' (5,8,7)', color='orange', fontsize=12)
 
-ax.scatter(x, y, z, c='blue', marker='o', label='Random Points')
-ax.scatter(*v1, c='red', s=100, label='Vertex 1 (2,3,4)')
-ax.scatter(*v2, c='green', s=100, label='Vertex 2 (-1,-2,1)')
-ax.scatter(*v3, c='orange', s=100, label='Vertex 3 (5,8,7)')
-
-ax.text(v1[0], v1[1], v1[2], ' (2,3,4)', color='red', fontsize=12)
-ax.text(v2[0], v2[1], v2[2], ' (-1,-2,1)', color='green', fontsize=12)
-ax.text(v3[0], v3[1], v3[2], ' (5,8,7)', color='orange', fontsize=12)
-
-ax.set_xlabel('X Label')
-ax.set_ylabel('Y Label')
-ax.set_zlabel('Z Label')
-ax.set_title('3D Scatter Plot of Random Points and Tetrahedron Vertices')
-
-ax.legend()
+ax.set_xlabel('X')
+ax.set_ylabel('Y')
+ax.set_zlabel('Z')
+ax.set_title('1000 Points on the Line')
 plt.savefig('../figs/fig.png')
 plt.show()
 

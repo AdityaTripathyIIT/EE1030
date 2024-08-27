@@ -1,44 +1,18 @@
+// line_points.c
 #include <stdio.h>
 #include <stdlib.h>
-#include <time.h>
 
-// Define the vertices of the tetrahedron
-const float v1[] = {2.0, 3.0, 4.0};
-const float v2[] = {-1.0, -2.0, 1.0};
-const float v3[] = {5.0, 8.0, 7.0};
-
-// Function to generate a random point within the tetrahedron
-void generate_random_point(float* x, float* y, float* z) {
-    float r1 = (float)rand() / RAND_MAX;
-    float r2 = (float)rand() / RAND_MAX;
-    float r3 = (float)rand() / RAND_MAX;
-
-    if (r1 + r2 > 1) {
-        r1 = 1 - r1;
-        r2 = 1 - r2;
+// Function to generate 1000 points on the line joining (x1, y1, z1) and (x2, y2, z2)
+void generate_line_points(double x1, double y1, double z1, double x2, double y2, double z2, double *points, int num_points) {
+    double dx = x2 - x1;
+    double dy = y2 - y1;
+    double dz = z2 - z1;
+    
+    for (int i = 0; i < num_points; i++) {
+        double t = (double)i / (num_points - 1);
+        points[i * 3] = x1 + t * dx;
+        points[i * 3 + 1] = y1 + t * dy;
+        points[i * 3 + 2] = z1 + t * dz;
     }
-
-    *x = v1[0] + r1 * (v2[0] - v1[0]) + r2 * (v3[0] - v1[0]);
-    *y = v1[1] + r1 * (v2[1] - v1[1]) + r2 * (v3[1] - v1[1]);
-    *z = v1[2] + r1 * (v2[2] - v1[2]) + r2 * (v3[2] - v1[2]);
-}
-
-int main() {
-    FILE* file = fopen("points.txt", "w");
-    if (file == NULL) {
-        perror("Error opening file");
-        return 1;
-    }
-
-    srand(time(NULL)); // Seed the random number generator
-
-    for (int i = 0; i < 1000; ++i) {
-        float x, y, z;
-        generate_random_point(&x, &y, &z);
-        fprintf(file, "%f %f %f\n", x, y, z);
-    }
-
-    fclose(file);
-    return 0;
 }
 
