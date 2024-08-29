@@ -1,0 +1,82 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=10mm, onecolumn]{geometry}
+%\usepackage{lmodern} % Ensure lmodern is loaded for pdflatex
+\usepackage{tfrupee} % Include tfrupee package
+
+\setlength{\headheight}{1cm} % Set the height of the header box
+\setlength{\headsep}{0mm}     % Set the distance between the header box and the top of the text
+
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+% \usepackage{gvv}                                        
+\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\begin{document}
+
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+\title{1.7.2}
+\author{EE24BTECH11001 - Aditya Tripathy
+}
+ \maketitle
+% \newpage
+% \bigskip
+{\let\newpage\relax\maketitle}
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\setlength{\intextsep}{10pt} % Space between text and floats
+
+
+\numberwithin{equation}{enumi}
+\numberwithin{figure}{enumi}
+\renewcommand{\thetable}{\theenumi}
+
+
+\textbf{Question}:\\
+Show that the points $P\brak{5,4}, Q\brak{7,k}$ and $R\brak{9-2}$ are collinear.
+\\
+\textbf{Solution: }\\
+From \brak{1.1.9.1}, Points A, B, C are defined to be collinear if
+\begin{align} 
+	rank\myvec{\brak{\vec{B}-\vec{A}}^\top \\ \brak{\vec{C}-\vec{A}}^\top } = 1\\
+\end{align}
+Therefore, there should be only 1 non-zero row in collinearity matrix after row-operations.
+So, forming the collinearity matrix and doing row operations,
+\begin{align}
+	\myvec{2&k-4\\4&-6} \xrightarrow{R_2 = R_2-2R_1}  \myvec{2&k-4\\0&2-2k}\\
+	\implies 2-2k = 0 \implies k = 1
+\end{align}
+Therefore k=1 will satisfy condition of collinearity.
+\begin{figure}[h!]
+   \centering
+   \includegraphics[width=0.7\linewidth]{figs/fig.png}
+   \caption{Line joining the three given points}
+\end{figure}
+\end{document}  
