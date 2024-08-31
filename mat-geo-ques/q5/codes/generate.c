@@ -11,4 +11,7 @@ void generate_line_points(double x1, double y1, double x2, double y2, double *po
         points[i * 2 + 1] = y1 + t * dy;
     }
 }
+void free_ptr(double *points){
+    free(points);
 
+}

@@ -31,7 +31,7 @@ ax.scatter(points[:, 0], points[:, 1], c='r', marker='o')
 ax.text(x1, y1, ' (5,4)', color='red', fontsize=12)
 ax.text(x2, y2, ' (9,-2)', color='green', fontsize=12)
 ax.text(x3, y3, ' (7,1)', color='blue', fontsize=12)
-
+gen.free_ptr(points.ctypes.data_as(ctypes.POINTER(ctypes.c_double)))
 ax.set_xlabel('X')
 ax.set_ylabel('Y')
 ax.set_title('1000 Points on the Line')
