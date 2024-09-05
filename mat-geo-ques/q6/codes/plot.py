@@ -88,5 +88,6 @@ plt.ylabel('Y')
 plt.legend()
 plt.title('Lines Joining Points and Solution')
 plt.grid(True)
+plt.savefig('../figs/fig.png')
 plt.show()
 
