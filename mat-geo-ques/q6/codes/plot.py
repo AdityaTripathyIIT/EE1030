@@ -69,18 +69,18 @@ print(f"y = {solution[1]}")
 #plotting begins here
 
 line1 = generate_line_points(point1,point2, 1000)
-       
+plt.scatter(solution[0], solution[1])
 plt.plot([point1[0], point2[0]], [point1[1], point2[1]], 'ro', label='Original Points')
-plt.scatter(line1[:, 0], line1[:, 1], label='Line joining (7,6) and (3,4)')
+plt.plot(line1[:, 0], line1[:, 1], label='Line joining (7,6) and (3,4)')
 
 
 line2 = generate_line_points(solution, point1, 1000)
-plt.scatter(line2[:, 0], line2[:, 1], label='Line joining (7,6) and solution point')
+plt.plot(line2[:, 0], line2[:, 1], label='Line joining (7,6) and solution point')
 
 
 line3 = generate_line_points(solution, point2, 1000)
-plt.scatter(line3[:, 0], line3[:, 1], label='Line Joining (3,4) and solution point')
-
+plt.plot(line3[:, 0], line3[:, 1], label='Line Joining (3,4) and solution point')
+plt.text(solution[0], solution[1], '(7.5, 0)')
 plt.text(point1[0], point1[1], '(7,6)')
 plt.text(point2[0], point2[1], '(3,4)')
 plt.xlabel('X')

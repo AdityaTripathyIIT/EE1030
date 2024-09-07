@@ -63,8 +63,8 @@
 Find the point on $X$ axis which is equidistant from \myvec{7\\6} and \myvec{3\\4}.
 \\
 \textbf{Solution: }\\
-Let the desired point on the $X$ axis be C $\myvec{x \\ 0}$. Let $A$ and $B$ be the above points respectively.
-Let $S$ be any point on the perpendicular bisector of $AB$
+Let $A$ and $B$ be the above points respectively.
+Let $S$ be any point on the perpendicular bisector of $AB$.
 \begin{align} 
     ||A-S|| = ||B-S||\\
     \implies \sqrt{\brak{A-S}^\top \brak{A-S}} =  \sqrt{\brak{B-S}^\top \brak{B-S}} \\
@@ -73,19 +73,14 @@ Let $S$ be any point on the perpendicular bisector of $AB$
     \implies 2B^\top S - 2A^\top S = ||B||^2 - ||A||^2\\
     \implies 2\brak{B-A}^\top S = ||B||^2 - ||A||^2 \\
 \end{align}
-Now we have the line representing perpendicular bisector of line joining $A$and $B$.
-The solution $S$ is found by solving the previous eqution with the eqution for $X$ axis.
+Equation of X-axis
 \begin{align}
     m^\top S = 0\\
+    m = \myvec{0 \\ 1}
 \end{align}
-where m = \myvec{0 \\ 1}.\\
 So, the matrix equation to solve becomes,
 \begin{align}
-    \myvec{B-A &  m}^\top S = \myvec{\frac{||B||^2 - ||A||^2}{2}\\ 0}
-\end{align}
-
-On solving,
-\begin{align}
+    \myvec{B-A &  m}^\top S = \myvec{\frac{||B||^2 - ||A||^2}{2}\\ 0}\\
     \myvec{-4 & -2 \\0 & 1}S = \myvec{-30 \\ 0}\\
     \myvec{-4 & -2 & -30 \\ 0 & 1 & 0} \xrightarrow{R_1 = 2R_2 + R_1 } \myvec{-4 & 0 & -30 \\ 0 & 1 & 0}\\
     \myvec{-4 & 0 & -30 \\ 0 & 1 & 0} \xrightarrow{R_1 = \frac{R_1}{-4}}
