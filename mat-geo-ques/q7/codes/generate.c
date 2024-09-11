@@ -15,3 +15,7 @@ void free_ptr(double *points){
     free(points);
 
 }
+void section(double *x , double *y, double x1, double y1, double x2, double y2, int k){
+    *x = (k*x2 + x1)/(k+1);
+    *y = (k*y2 + y1)/(k+1);
+}
