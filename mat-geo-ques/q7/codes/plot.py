@@ -37,7 +37,7 @@ gen.generate_line_points(
 
 fig = plt.figure()
 ax = plt.gca()
-ax.scatter(points[:, 0], points[:, 1],s=1, c='r', marker='o')
+plt.plot(points[:, 0], points[:, 1])
 plt.annotate( '(-6, 7)',(x1, y1), textcoords="offset points", xytext = (35,-5), ha = "center")
 plt.annotate('(-1, -5)',(x2, y2),textcoords = "offset points", xytext = (-40, 0), ha = "center")
 plt.annotate( f"({x3.value}, {y3.value})", (x3.value, y3.value),textcoords="offset points"
