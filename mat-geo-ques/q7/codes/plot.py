@@ -38,9 +38,10 @@ gen.generate_line_points(
 fig = plt.figure()
 ax = plt.gca()
 ax.scatter(points[:, 0], points[:, 1], c='r', marker='o')
-ax.text(x1, y1, ' (-6, 7)', color='red', fontsize=12)
-ax.text(x2, y2, ' (-1, -5)', color='green', fontsize=12)
-ax.text(x3.value, y3.value, f"({x3.value}, {y3.value})", color='blue', fontsize=12)  # Access value from ctypes object
+plt.annotate( '(-6, 7)',(x1, y1), textcoords="offset points", xytext = (35,-5), ha = "center")
+plt.annotate('(-1, -5)',(x2, y2),textcoords = "offset points", xytext = (-40, 0), ha = "center")
+plt.annotate( f"({x3.value}, {y3.value})", (x3.value, y3.value),textcoords="offset points"
+             , xytext=(5,0))  # Access value from ctypes object
 gen.free_ptr(points.ctypes.data_as(ctypes.POINTER(ctypes.c_double)))
 ax.set_xlabel('X')
 ax.set_ylabel('Y')
