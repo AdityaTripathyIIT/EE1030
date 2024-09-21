@@ -3,56 +3,35 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 gen = ctypes.CDLL('./generate.so')
+gen.get_vertex.argtypes = [ctypes.c_double, ctypes.c_double, ctypes.POINTER(ctypes.c_double), ctypes.POINTER(ctypes.c_double)]
+gen.get_vertex.restype = None
+gen.generate_triangle.argtypes = [ctypes.c_double, ctypes.c_int, ctypes.POINTER(ctypes.c_double * 3 * 1000 * 2)]
+gen.generate_triangle.restype = None
 
-gen.generate_line_points.argtypes = [
-    ctypes.c_double, ctypes.c_double,
-    ctypes.c_double, ctypes.c_double,
-    ctypes.POINTER(ctypes.c_double), ctypes.c_int
-]
-gen.generate_line_points.restype = None
+# Input length
+length = 5.0
 
-
-x1, y1 = 0, 0
-x2, y2 = 5, 0
-x3, y3 = 2.5 , 5* 3**(0.5) / 2
-
+x3 = ctypes.c_double()
+y3 = ctypes.c_double()
+gen.get_vertex(length, 0.0, ctypes.byref(x3), ctypes.byref(y3))
+vertices = [[0.0, 0.0], [length, 0.0], [x3.value, y3.value]]
 num_points = 1000
-points = np.zeros((num_points, 2), dtype=np.double)
+points = (ctypes.c_double * (3 * num_points * 2))()
 
-gen.generate_line_points(
-    x1, y1, x2, y2,
-    points.ctypes.data_as(ctypes.POINTER(ctypes.c_double)),
-    num_points
-)
+gen.generate_triangle(length, num_points, ctypes.cast(points, ctypes.POINTER(ctypes.c_double * 3 * 1000 * 2)))
 
 fig = plt.figure()
 ax = plt.gca()
-plt.plot(points[:, 0], points[:, 1])
-
-points = np.zeros((num_points, 2), dtype=np.double)
-gen.generate_line_points(
-    x1, y1, x3, y3,
-    points.ctypes.data_as(ctypes.POINTER(ctypes.c_double)),
-    num_points
-)
-plt.plot(points[:, 0], points[:, 1])
-points = np.zeros((num_points, 2), dtype=np.double)
-gen.generate_line_points(
-    x2, y2, x3, y3,
-    points.ctypes.data_as(ctypes.POINTER(ctypes.c_double)),
-    num_points
-)
-plt.plot(points[:, 0], points[:, 1])
-
-plt.annotate( '(0,0)',(x1, y1), textcoords="offset points", xytext = (-5,-5), ha = "center")
-plt.annotate('(5,0)',(x2, y2),textcoords = "offset points", xytext = (-5, -5), ha = "center")
-plt.annotate( f"({x3}, {y3})", (x3, y3),textcoords="offset points"
-             , xytext=(5,0))  # Access value from ctypes object
-gen.free_ptr(points.ctypes.data_as(ctypes.POINTER(ctypes.c_double)))
+points_np = np.frombuffer(points, dtype=np.double).reshape((3, num_points, 2))
+plt.plot(points_np[0, :, 0], points_np[0, :, 1])
+plt.plot(points_np[1, :, 0], points_np[1, :, 1])
+plt.plot(points_np[2, :, 0], points_np[2, :, 1])
+plt.annotate('(0,0)', vertices[0], textcoords="offset points", xytext=(-5, -5), ha="center")
+plt.annotate(f"({vertices[1][0]}, 0)", vertices[1], textcoords="offset points", xytext=(-5, -5), ha="center")
+plt.annotate(f"({vertices[2][0]}, {vertices[2][1]})", vertices[2], textcoords="offset points", xytext=(5, 5), ha="center")
 ax.set_xlabel('X')
 ax.set_ylabel('Y')
 ax.set_title('Equilateral triangle with side 5cm')
 plt.savefig('../figs/fig.png')
 plt.show()
-
 
