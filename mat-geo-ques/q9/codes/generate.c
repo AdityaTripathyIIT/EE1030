@@ -40,10 +40,7 @@ struct point *generate_line_points(struct point point1, struct point point2, int
 void generate_triangle(struct triangle *to_draw) {
     to_draw->sides = (struct point**) malloc(3 * sizeof(struct point*));
     to_draw->sides[0] = generate_line_points(to_draw->vertex1, to_draw->vertex2, to_draw->num_points);
-    
-    // Vertex 3 calculated here
     to_draw->vertex3 = *get_vertex(to_draw->vertex1, to_draw->vertex2);
-    
     to_draw->sides[1] = generate_line_points(to_draw->vertex2, to_draw->vertex3, to_draw->num_points);
     to_draw->sides[2] = generate_line_points(to_draw->vertex1, to_draw->vertex3, to_draw->num_points);
 }
