@@ -5,15 +5,14 @@ import matplotlib.pyplot as plt
 circle_lib = ctypes.CDLL('./generate.so')
 
 circle_lib.generate_circle_points.argtypes = [ctypes.POINTER(ctypes.c_double), ctypes.c_double, ctypes.c_int]
-circle_lib.generate_circle_points.restype = ctypes.POINTER(ctypes.c_double)  # Specify return type
-
+circle_lib.generate_circle_points.restype = ctypes.POINTER(ctypes.c_double)  
 def generate_circle_points(center, radius, num_points):
-    points_ptr = circle_lib.generate_circle_points(center, radius, num_points)  # Call C function
+    points_ptr = circle_lib.generate_circle_points(center, radius, num_points)  
     points = np.ctypeslib.as_array(points_ptr, (num_points, 2))
     return points
 
-center_array_type = ctypes.c_double * 2  # Define a ctypes array type
-my_center = center_array_type(0.5, 0.25)  # Initialize the center array
+center_array_type = ctypes.c_double * 2  
+my_center = center_array_type(0.5, 0.25)  
 radius = 1/12
 num_points = 1000
 
