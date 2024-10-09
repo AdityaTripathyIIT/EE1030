@@ -1,0 +1,217 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal,12pt,onecolumn]{IEEEtran}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{amsmath}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{multicol}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+\usepackage{gvv}                                        
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{float}
+
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+
+\begin{document}
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+\title{2021-Sep-1-S1}
+\author{EE24BTECH11001 -  ADITYA TRIPATHY}
+\maketitle
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+
+\begin{enumerate}
+    \item[16.] 
+        Let $P_1, P_2 \dots P_15$  be 15 points on a circle. The number of distinct triangles formed by points $P_i, P_j, P_k$ such that 
+        $i + j +k \ne 0$ is :
+        \hfill{\brak{2021-Sep-1-S1}}
+        \begin{multicols}{4}
+            \begin{enumerate}
+                \item 12
+                    \columnbreak
+                \item 419
+                    \columnbreak
+                \item 443
+                    \columnbreak
+                \item 455
+            \end{enumerate}
+        \end{multicols}
+
+    \item[17.] The range of the function 
+        \begin{align}
+            f\brak{x} = \log_{\sqrt{3}} \brak{3 + \cos \brak{\frac{3\pi}{4} + x} + \cos \brak{\frac{\pi}{4} + x}+ \cos \brak{\frac{\pi}{4} - x} +\cos \brak{\frac{3\pi}{4} - x}}
+        \end{align} is :
+        \hfill{\brak{2021-Sep-1-S1}}
+        \begin{multicols}{4}
+            \begin{enumerate}
+                \item $\brak{0,  \sqrt{5}}$ \columnbreak
+                \item $\sbrak{-2, 2}$ \columnbreak
+                \item $\sbrak{\frac{1}{\sqrt{5}}, \sqrt{5}}$ \columnbreak
+                \item $\sbrak{0, 2}$
+            \end{enumerate}
+        \end{multicols}
+
+
+    \item[18.] Let $a_1, a_2 \dots a_{21}$ be an AP such that 
+        \begin{align}
+            \sum_{n = 1} ^{20} \frac{1}{a_{n}a_{n+1}} = \frac{4}{9}
+        \end{align}. If the sum of the AP is 189, then $a_{6}a_{16}$ is : 
+        \hfill{\brak{2021-Sep-1-S1}}
+        \begin{enumerate}
+                \begin{multicols}{2}
+                \item 57 \columnbreak
+                \item 72
+                \end{multicols}
+                \begin{multicols}{2}
+                \item 48 \columnbreak
+                \item 36
+                \end{multicols}
+        \end{enumerate}
+
+    \item[19.]  The function $f\brak{x}$, that satisfies the condition  
+        \begin{align}
+            f\brak{x} = x + \int_{0} ^ {\frac{\pi}{2}} \sin x \cos y f\brak{y} \, dy
+        \end{align} 
+        is : 
+        \hfill{\brak{2021-Sep-1-S1}}
+        \begin{enumerate}
+                \begin{multicols}{4}
+                \item $x + \frac{2}{3}\brak{\pi - 2}\sin x$ \columnbreak
+                \item $x + \brak{\pi + 2}\sin x$ \columnbreak
+                \item $x + \frac{\pi}{2}\sin x$ \columnbreak
+                \item $x + \brak{\pi - 2}\sin x$
+                \end{multicols}
+        \end{enumerate}
+
+    \item[20.] Let $\theta$ be the acute angle between the tangents to the ellipse 
+        \begin{align}
+            \frac{x^2}{9} + \frac{y^2}{1} = 1
+        \end{align} and the circle 
+        \begin{align}
+            x^2 + y^2 = 3
+        \end{align} at their point of intersection in the first quadrant. Then $\tan \theta$ is equal to :
+
+        \hfill{\brak{2021-Sep-1-S1}}
+        \begin{enumerate}
+            \item $\frac{5}{2\sqrt{2}}$ 
+            \item $\frac{2}{\sqrt{3}}$ 
+            \item $\frac{4}{\sqrt{3}}$  
+            \item $2$
+        \end{enumerate}
+    \item[21.] Let X be the random variable with distribution : 
+        \begin{figure}
+            \centering
+            \begin{tabular}[12pt]{ |c| c| c | c | c| c|}
+                \hline
+                X & -2 & -1 & 3 & 4 & 6\\ 
+                \hline
+                $\Pr{X = x}$  & $\frac{1}{5}$ & a & $\frac{1}{3}$ & $\frac{1}{5}$ & b \\
+                \hline 
+            \end{tabular}
+        \end{figure}
+        If the mean of X is 2.3 and the variance of X is $\sigma ^ 2$ then $100\sigma ^ 2$ is equal to:
+        \hfill{\brak{2021-Sep-1-S1}}\\
+
+    \item[22.] Let 
+        \begin{align}
+            f\brak{x} = x^6 + 2x^4 + x^3 + 2x + 3, x \in \textbf{R}. 
+        \end{align}
+        Then the natural number $n$ for which $lim_{x \to 1} \frac{x^{n}f\brak{1} - f\brak{x}}{x - 1} = 44$ is :
+        \hfill{\brak{2021-Sep-1-S1}}\\
+
+
+    \item[23.] If for the complex number z satisfying $\abs{z - 2 -2i} \le 1$, the maximum value of $\abs{3iz + 6}$ is attained at $a + ib$, then $a + b$ is equal to
+        \hfill{\brak{2021-Sep-1-S1}}\\
+
+
+    \item[24.] 4. Let the points of intersections of the lines $x - y + 1 = 0, x -  2y + 3 = 0$ and $2x - 5y + 11 = 0$ are the mid points
+        of the sides of a triangle ABC. Then the area of the triangle ABC is :
+        \hfill{\brak{2021-Sep-1-S1}}\\
+
+
+    \item[25.] Let $f\brak{x}$  be a polynomial of degree 3 such that $f\brak{k} = -\frac{2}{k}$ for $k = 2, 3, 4, 5$. Then the value of
+        $53 - 10f\brak{10}$ is :
+        \hfill{\brak{2021-Sep-1-S1}}\\
+
+
+    \item[26.] All of the arrangements, with or without meaning, of the word FARMER ae written excluding any word that has two R appering together . The arrangements
+        are listed serially in the alphabetic order as in the English dictionary. Then the serial number of the word FARMER in this list is:
+        \hfill{\brak{2021-Sep-1-S1}}\\
+
+
+    \item[27.] If the sum of the coefficients in the expansion of $\brak{x + y}^n$ is 4096, then the greatest coefficient in the expansion is :
+        \hfill{\brak{2021-Sep-1-S1}}\\
+
+
+    \item[28.] If $\vec{a} = 2\vec{i} - \vec{j} + 2\vec{k}$ and $\vec{b} = \vec{i} + 2\vec{j} - 1\vec{k}$. Let a vector $\vec{v}$ be in the plane containing
+        $\vec{a}$ and $\vec{b}$. If $\vec{v}$ is perpendicular to the vector $3\vec{i} + 2\vec{j} - \vec{k}$ and its projection on $\vec{a}$ is 19 units, 
+        then $\norm{2\vec{v}}^2$ is equl to :
+        \hfill{\brak{2021-Sep-1-S1}}\\
+
+
+    \item[29.] Let $\sbrak{t}$ denote the greatest integer $ \le t $. The number of points where the function
+        \begin{align}
+            f\brak{x} = \sbrak{x} \abs{x^2 - 1} + \sin \brak{\frac{\pi}{\sbrak{x} + 3}} - \sbrak{x + 1}, x \in \brak{-2, 2} 
+        \end{align}
+        is not continuous is :
+        \hfill{\brak{2021-Sep-1-S1}}\\
+
+
+    \item[30.] A man starts walking from the point $P\brak{-3,4}$, touches the $x$-axis at R, and then turns to reach at the point $Q\brak{0, 2}$. The man is walking at a constant
+        speed. If the man reaches the point $Q$ in the minimum time, then $50\brak{\brak{PR}^2 + \brak{RQ}^2}$
+        \hfill{\brak{2021-Sep-1-S1}}
+        \begin{figure}
+            \centering
+            \begin{tikzpicture}[scale = 2]
+                \draw[black, thick, domain=-1:-3, samples=100] 
+                plot ({\x}, {(-2)*\x - 2}); 
+                \draw[black, thick, domain=-3:0, samples=100] 
+                plot ({\x}, {2 - 0.6667 *(\x)}); 
+                \draw[black, thick, domain=-1:0, samples=100] 
+                plot ({\x}, {2 + 2 *(\x)}); 
+                \draw[->] (-3, 0) -- (3, 0) node[right] {$x$}; 
+                \draw[->] (0, -3) -- (0, 3) node[above] {$y$};	
+                \fill[black] (-3, 4) circle (1pt) node[left] {\small $P\brak{-3,4}$};
+                \fill[black] (0, 2) circle (1pt) node[right] {\small $Q\brak{0, 2}$};
+                \fill[black] (-1, 0) circle (1pt) node[below left] {\small $R\brak{-1, 0}$};		
+            \end{tikzpicture}
+        \end{figure}
+\end{enumerate}
+\end{document}
