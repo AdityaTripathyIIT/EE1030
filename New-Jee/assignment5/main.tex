@@ -1,0 +1,266 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal,12pt,onecolumn]{IEEEtran}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{amsmath}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{multicol}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+\usepackage{gvv}                                        
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{float}
+
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+
+\begin{document}
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+\title{2024 April 5 Shift 1}
+\author{EE24BTECH11001 -  ADITYA TRIPATHY}
+\maketitle
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+
+\begin{enumerate}
+	\item[1.] 
+	    Let a circle C of radius 1 and closer to the origin be such that the lines
+        passing through the point $\brak{3, 2}$ and parallel to the coordinate axes touch it.
+        Then the shortest distance of the circle from the point $\brak{5, 5}$
+		\hfill{\brak{2024-Apr}}
+	\begin{multicols}{4}
+		\begin{enumerate}
+			\item 5
+			\columnbreak
+        \item $4\sqrt{2}$
+			\columnbreak
+			\item 4
+			\columnbreak
+        \item $2\sqrt{2}$
+		\end{enumerate}
+	\end{multicols}
+
+	\item[2.] 
+        Let a rectangle $ABCD$ of sides 2 and 4 be inscribed in another rectangle $PQRS$
+        such that the vertices of the rectangle $ABCD$ lie on the sides og the rectangle $PQRS$.
+        Let $a$ and $b$ be the sides of the rectangle $PQRS$ when its area is maximum. Then
+        $\brak{a + b}^2$ is equal to :
+		\begin{multicols}{4}
+		\begin{enumerate}
+			\item 80 \columnbreak
+			\item 60 \columnbreak
+			\item 72 \columnbreak
+			\item 64
+		\end{enumerate}
+	\end{multicols}
+
+
+\item[3.] If
+	\begin{align}
+        \frac{1}{\sqrt{1} + \sqrt{2}} + \frac{1}{\sqrt{2} + \sqrt{3}} + \dots \frac{1}{\sqrt{99} + \sqrt{100}} = m
+	\end{align} and
+    \begin{align}
+        \frac{1}{1 . 2} + \frac{1}{2 . 3} + \dots \frac{1}{99 . 100} = n
+    \end{align} then the point $\brak{m, n}$ lies on the line
+		\hfill{\brak{2024-Apr}}
+		\begin{enumerate}
+            \item $11\brak{x-1} - 100\brak{y-2}$ 
+            \item $11\brak{x-2} - 100\brak{y-1}$ 
+            \item $11\brak{x-1} - 100y$ 
+            \item $11x - 100y$ 
+		\end{enumerate}
+		
+	\item[4.] Let $d$ be this distance of the point of intersection of the lines
+        \begin{align}
+            \frac{x-6}{3} = \frac{y}{2} = \frac{z+1}{1} 
+        \end{align} and 
+        \begin{align}
+            \frac{x-7}{4} = \frac{y-9}{3} = \frac{z-4}{2}
+        \end{align} from the point $\brak{7, 8, 9}$. Then $d^2 + 6$ is equal to :
+        \hfill{\brak{2024-Apr}}
+		\begin{enumerate}
+			\begin{multicols}{4}
+				\item 72 \columnbreak
+				\item 78 \columnbreak
+				\item 69 \columnbreak
+				\item 75
+			\end{multicols}
+		\end{enumerate}
+
+	\item[5.] Let the line $2x + 3y - k = 0, k > 0$, intersect the x-axis and y-axis at the points 
+        $A$ and $B$, respectively. If the equation of the circle having the line segment $AB$ as
+        a diameter is $x^2 + 9y^2 = k^2$ is $\frac{m}{n}$, where $m$ and $n$ are coprime, then
+        $2m + n$ is equal to :
+		\hfill{\brak{2024-Apr}}
+		\begin{enumerate}
+                \begin{multicols}{4}
+			\item 11 \columnbreak 
+			\item 10 \columnbreak
+			\item 13 \columnbreak
+			\item 12  
+                \end{multicols}
+		\end{enumerate}
+	\item[6.]
+        The coefficients $a, b, c$ in the quadratic equation $ax^2 + bx +c = 0$ are chosen from the 
+        set $\{ 1, 2 , 3, 4, 5, 6, 7, 8\}$. The probability of this equation having repeated roots is :
+		\hfill{\brak{2024-Apr}}
+		\begin{multicols}{4}
+		\begin{enumerate}
+            \item $\frac{3}{128}$ \columnbreak
+            \item $\frac{1}{64}$ \columnbreak
+            \item $\frac{1}{128}$ \columnbreak
+            \item $\frac{3}{256}$
+		\end{enumerate}
+	\end{multicols}
+\item[7.] Suppose $\theta \in \sbrak{0, \frac{\pi}{4}}$ is a solution of $4\cos \theta - 3 \sin \theta = 1$. 
+    Then $\cos \theta$ is equal to :
+		\hfill{\brak{2024-Apr}}
+		\begin{enumerate}
+            \item $\frac{4}{\brak{3\sqrt{6} - 2}}$ 
+            \item $\frac{6 - \sqrt{6}}{\brak{3\sqrt{6} - 2}}$ 
+            \item $\frac{4}{\brak{3\sqrt{6} + 2}}$ 
+            \item $\frac{6 + \sqrt{6}}{\brak{3\sqrt{6} + 2}}$ 
+		\end{enumerate}
+\item[8.]
+    For the function
+	\begin{align}
+        f\brak{x} = \sin x + 3x - \frac{2}{\pi}\brak{x^2 + x}, \textnormal{where} x \in \sbrak{0, \frac{\pi}{2}}
+	\end{align} 
+    Consider the follwing two statements,
+    \begin{enumerate}
+        \item[1.] $f$ is increasing in $\brak{0, \frac{\pi}{2}}$
+        \item[2.] $f'$ is decreasing in $\brak{0, \frac{\pi}{2}}$
+    \end{enumerate}
+		\hfill{\brak{2024-Apr}}
+		\begin{enumerate}
+			\item Only 2 is true.
+			\item  neither 1 nor 2 is true.
+			\item  both 1 and 2 are true.
+			\item only 1 is true.
+		\end{enumerate}
+    \item[9.] Let $f\brak{x} = x^5 + 2x^3 + 3x + 1, x \in \mathbb{R},$ and $g\brak{x}$ be a function 
+        such that $g\brak{f\brak{x}} = x$ for all $x \in \mathbb{R}$. Then $\frac{g\brak{7}}{g'\brak{7}}$
+        is equal to:
+		\hfill{\brak{2024-Apr}}
+        \begin{multicols}{4}
+            
+		\begin{enumerate}
+			\item 7 \columnbreak
+			\item 42 \columnbreak 
+			\item 14 \columnbreak
+			\item 1
+		\end{enumerate}
+        \end{multicols}
+\item[10.] If the system of equations 
+		\begin{align}
+            11x + y + \lambda z = -5 \\
+            2x + 3y + 5z = 3 \\
+            8x - 19y - 39z = \mu
+		\end{align}, has infinitely many solutions, then $\lambda ^ 4 - \mu$ is equal to :
+        \hfill{\brak{2024-Apr}}
+		\begin{multicols}{4}
+		\begin{enumerate}
+			\item 45 \columnbreak
+			\item 51 \columnbreak 
+			\item 47 \columnbreak
+			\item 49
+		\end{enumerate}
+        \end{multicols}
+		\
+\item[11.] The value of 
+    \begin{align}
+        \int_{-\pi} ^{\pi} \frac{2y\brak{1 + \sin y}}{1 + \cos ^2 y} \, dy 
+    \end{align} is :
+		\hfill{\brak{2024-Apr}}
+		
+	\begin{multicols}{4}
+		\begin{enumerate}
+            \item $\frac{\pi}{2}$ \columnbreak
+            \item $\frac{\pi ^ 2}{2}$ \columnbreak
+            \item $\pi ^ 2$ \columnbreak
+			\item $2\pi ^2 $
+		\end{enumerate}
+	\end{multicols}
+\item[12.] If the line $\frac{2-x}{3} = \frac{3y-2}{4\lambda} = 4-z$ makes right angle with 
+    the line $\frac{x+3}{3\mu} = \frac{1-2y}{6} = \frac{5-z}{7}$
+		\hfill{\brak{2024-Apr}}
+		\begin{multicols}{4}
+		\begin{enumerate}
+			\item 13 \columnbreak
+			\item 5 \columnbreak 
+			\item 4 \columnbreak
+			\item 6
+		\end{enumerate}
+        \end{multicols}
+    \item[13.] If $A\brak{1, -1, 2}, B\brak{5, 7, -6}, C\brak{3, 4, -10}$ and $D\brak{-1, -4, -2}$ 
+        are the vertices of a quadrilateral $ABCD$, then its area is :
+		\hfill{\brak{2024-Apr}}
+	\begin{multicols}{4}
+		\begin{enumerate}
+            \item $12\sqrt{29}$ \columnbreak
+            \item $24\sqrt{29}$ \columnbreak
+            \item $48\sqrt{7}$ \columnbreak
+            \item $24\sqrt{7}$
+		\end{enumerate}
+	\end{multicols}
+\item[14.] Let $A$ and $B$ be the two square matrices of order 3 such that $\abs{A} = 3$ 
+    and $\abs{B} = 8$. Then 
+    $\abs{A^{\top}A\brak{\textnormal{adj}\brak{2A}}^{-1}\brak{\textnormal{adj}\brak{4b}\brak{\textnormal{adj}\brak{AB}^{-1}AA^{\top}}}}$
+    is equal to :
+		\hfill{\brak{2024-Apr}}
+	\begin{multicols}{4}
+		\begin{enumerate}
+            \item $64$ \columnbreak
+            \item $81$ \columnbreak
+            \item $108$ \columnbreak
+            \item $32$
+		\end{enumerate}
+	\end{multicols}
+\item[15.] Let $A = \{ 1, 3, 5, 7, 9\}$ and $B = \{ 2, 4, 5, 7, 8, 10, 12 \}$. Then the total
+    number of one-one maps $f : A \rightarrow B$, such that $f\brak{1} + f\brak{3} = 14$ is :
+		\hfill{\brak{2024-Apr}}
+	\begin{multicols}{4}
+		\begin{enumerate}
+			\item $120$ \columnbreak
+			\item $180$ \columnbreak
+			\item $480$ \columnbreak
+			\item $240$
+		\end{enumerate}
+	\end{multicols}
+	\end{enumerate}
+\end{document}
