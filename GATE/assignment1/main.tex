@@ -1,0 +1,257 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal,12pt,onecolumn]{IEEEtran}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{amsmath}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{multicol}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+\usepackage{gvv}                                        
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{float}
+
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+
+\begin{document}
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+\title{2008-MA-69-85}
+\author{EE24BTECH11001 -  ADITYA TRIPATHY}
+\maketitle
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+
+\begin{enumerate}
+	\item[69.] 
+	    The initial value problem $u_x + u_y = 1$, $u\brak{s, s} = \sin s, 0 \le s \le 1,$ has
+		\hfill{\brak{2008-MA}}
+	\begin{multicols}{4}
+		\begin{enumerate}
+			\item two solutions 
+			\columnbreak
+			\item a unique solution
+			\columnbreak
+			\item no solution
+			\columnbreak
+			\item infinitely many solutions
+		\end{enumerate}
+	\end{multicols}
+
+\item[70.] Let $u\brak{x, t} = 0,$ be the solution of $u_tt - u_xx = 1, x \in \mathbb{R}, t > 0$
+    with $u\brak{x, 0} = 0, u_t\brak{x, 0} = 0, x \in \mathbb{R}.$ Then $u\brak{\frac{1}{2}, \frac{1}{2}}$ 
+        is equal to 
+		
+		\hfill{\brak{2008-MA}}
+	\begin{multicols}{4}
+		\begin{enumerate}
+            \item $\frac{1}{8}$ \columnbreak
+            \item $-\frac{1}{8}$ \columnbreak
+            \item $\frac{1}{4}$ \columnbreak
+            \item $-\frac{1}{4}$ 
+		\end{enumerate}
+	\end{multicols}
+
+        \section{Common Data Questions}
+        \textbf{Common Data for 71, 72, 73}\\
+        Let $X = C\brak{\sbrak{0, 1}}$ with sup norm $\norm{ }_{\infty}$
+    \item[71.] Let $S = \{ x \in X : \norm{x}_{\infty} \le 1 \}$. Then  
+		\hfill{\brak{2008-MA}}
+		\begin{enumerate}
+			\item $S$ is convex and compact 
+			\item $S$ is not convex but compact
+			\item $S$ is convex but not compact 
+			\item $S$ is neither convex nor compact
+		\end{enumerate}
+		
+	\item[72.] Which one of the following is true?
+
+		\hfill{\brak{2008-MA}}
+		\begin{enumerate}
+            \item $C^{\infty}\brak{\sbrak{0, 1}}$ is dense in $X$
+            \item $X$ is dense $L^{\infty}\brak{\sbrak{0, 1}}$
+			\item $X$ has a countable basis
+            \item There is a sequence in $X$ which is uniformly Cauchy on on $\sbrak{0, 1}$ but does not converge uniformly on $\sbrak{0, 1}$
+		\end{enumerate}
+
+    \item[73.] Let $I = \cbrak{x \in X : x\brak{0} = 0}$. Then 
+		
+		\hfill{\brak{2008-MA}}
+		\begin{enumerate}
+			\item $I$ is not an ideal of $X$
+			\item $I$ is an ideal, nut not a prime ideal of $X$
+			\item $I$ is a prime ideal, but not a maximal ideal of $X$
+			\item $I$ is a maximal ideal of $X$
+		\end{enumerate}
+
+
+        \textbf{Common Data for 74, 75}\\
+        Let $X = C^1\brak{\sbrak{0, 1}}$ and $Y = C\brak{\sbrak{0, 1}}$, both with sup norm. Define
+        $F : X \rightarrow Y$ by $F\brak{x} = x + x^{\prime}$ and $f\brak{x} = x\brak{1} + x^{\prime}\brak{1}$
+        for $x \in X$.
+	\item[74.] Then
+		\hfill{\brak{2008-MA}}
+\begin{enumerate}
+			\item $F$ and $f$ are continuos
+			\item $F$ is continuous and $f$ is discontinuous
+			\item $F$ is discontinuous $f$ is contiuous
+			\item $F$ and $f$ are discontinuous
+		\end{enumerate}
+\item[75.] Then
+		\hfill{\brak{2008-MA}}
+\begin{enumerate}
+			\item $F$ and $f$ are closed maps
+			\item $F$ is a closed map and $f$ is not a closed map 
+			\item $F$ is not a closed map $f$ is a closed map
+			\item neither $F$ nor $f$ is a closed map
+		\end{enumerate}
+        
+        \section{Linked Answer Questions: Q76. to Q85 carry two marks each}
+\textbf{Statement for Linked Answer Questions 76 , 77}\\
+ Let $N = \mydet{\frac{3}{5} & -\frac{4}{5} & 0 \\ \frac{4}{5} & \frac{3}{5} & 0\\ 0 & 0 & 1}$
+	\item[76.] Then N is
+		\hfill{\brak{2008-MA}}
+\begin{enumerate}
+			\item non-invertible 
+			\item skew-symmetric
+			\item symmetric
+			\item orthogonal
+		\end{enumerate}
+		
+    \item[77.] If $M$ is any $3 \times 3$ real matrix, then trace$\brak{NMN^{\top}}$ is equal to
+		\hfill{\brak{2008-MA}}
+\begin{enumerate}
+    \item $\sbrak{i\textnormal{trace}\brak{N}}^2 \textnormal{trace}\brak{M}$ 
+    \item $2\textnormal{trace}\brak{N} + \textnormal{trace}\brak{M}$
+    \item $\textnormal{trace}\brak{M}$
+    \item $\sbrak{\textnormal{trace}\brak{N}}^2 + \textnormal{trace}\brak{M}$ 
+		\end{enumerate}
+\textbf{Statement for Linked Answer Questions 78 , 79}\\
+Let $f\brak{z} = \cos z - \frac{\sin z}{z}$ for non-zero $z \in \mathbb{C}$ and $f\brak{0} = 0$.
+Also, let $g\brak{z} = \sinh z$ for $z \in \mathbb{C}$.
+    \item[78.] Then $f\brak{z}$ has a zero $z = 0$ or order 
+		\hfill{\brak{2008-MA}}
+        \begin{enumerate}
+    \item 0 
+    \item 1
+    \item 2
+    \item greater than 2
+        \end{enumerate}
+\item[79.] Then $\frac{g\brak{z}}{z\brak{z}}$ has a pole at $z = 0$ or order 
+		\hfill{\brak{2008-MA}}
+        \begin{enumerate}
+    \item 1
+    \item 2
+    \item 3 
+    \item greater than 3
+        \end{enumerate}
+\textbf{Statement for Linked Answer Questions 80 , 81}\\
+Let $n \ge 3$ be an integer. Let $y$ be the polynomial solution of $\brak{1-x^2}y^{\prime \prime}
+-2xy^{\prime} + n\brak{n-1}y = 0$ satisfying $y\brak{1} = 1$
+	\item[80.] Then the degree of $y$ is
+		\hfill{\brak{2008-MA}}
+        \begin{multicols}{4}
+		\begin{enumerate}
+			\item $n$ 
+			\columnbreak
+			\item $n -1$
+			\columnbreak
+			\item less than $n-1$
+			\columnbreak
+			\item greater than $n + 1$
+		\end{enumerate}
+	\end{multicols}
+\item[81.] If $I = \int_{-1}^{1} y\brak{x}x^{n-3} \, dx$ and $J = \int_{-1}^{1} y\brak{x}x^{n} \, dx$, then 
+		\hfill{\brak{2008-MA}}
+        \begin{multicols}{4}
+		\begin{enumerate}
+			\item $I \ne 0, J \ne 0$ 
+			\columnbreak
+			\item $I \ne 0, J = 0$
+			\columnbreak
+			\item $I = 0, J \ne 0$
+			\columnbreak
+        \item $I = 0, J = 0$
+		\end{enumerate}
+	\end{multicols}
+
+\textbf{Statement for Linked Answer Questions 82 , 83}\\
+Consider the boundary value problem
+\begin{align}
+    u_xx + u_yy = 0, x \in \brak{0, \pi}, y \in \brak{0, \pi}, \\
+    u\brak{x, 0} = u\brak{x, \pi} = u\brak{0, y} = 0.
+\end{align}
+\item[82.] Any solution of this boundary value problem is of the form
+		\hfill{\brak{2008-MA}}
+		\begin{enumerate}
+            \item $\sum_{n = 1}^{\infty} a_n \sinh nx \sin ny$ 
+            \item $\sum_{n = 1}^{\infty} a_n \cosh nx \sin ny$ 
+			\item $\sum_{n = 1}^{\infty} a_n \sinh nx \cos ny$ 
+		\item $\sum_{n = 1}^{\infty} a_n \cosh nx \cos ny$ 
+		\end{enumerate}
+\item[83.] If an additional boundary condition $u_x\brak{\pi, y} = \sin y$ is satisfied, then 
+    $u\brak{x, \frac{\pi}{2}}$ is equal to
+		\hfill{\brak{2008-MA}}
+		\begin{enumerate}
+            \item $\frac{\pi}{2}\brak{e^x - e^{-x}}\brak{e^x + e^{-x}}$ 
+            \item $\frac{\pi\brak{e^x - e^{-x}}}{\brak{e^x + e^{-x}}}$ 
+            \item $\frac{\pi\brak{e^x + e^{-x}}}{\brak{e^x - e^{-x}}}$ 
+            \item $\frac{\pi}{2}\brak{e^{\pi} + e^{-\pi}}\brak{e^x - e^{-x}}$ 
+		\end{enumerate}
+\textbf{Statement for Linked Answer Questions 84 , 85}\\
+Let the random variable $X$ follow the exponential distribution with mean 2. Define
+$Y = \sbrak{X - 2 | X > 2}$.
+\item[84.] The value of $\Pr{Y \ge t}$
+		\hfill{\brak{2008-MA}}
+		\begin{enumerate}
+            \item $e ^ {\frac{-t}{2}}$ 
+            \item $e ^ {2}$ 
+            \item $\frac{1}{2}e ^ {\frac{-t}{2}}$ 
+            \item $\frac{1}{2}e ^ {-t}$ 
+		\end{enumerate}
+\item[85.] The value of $E\brak{Y}$ is equal to
+		\hfill{\brak{2008-MA}}
+		\begin{enumerate}
+            \item $\frac{1}{4}$ 
+            \item $\frac{1}{2}$ 
+            \item 1
+            \item 2
+		\end{enumerate}
+
+\end{enumerate}
+\end{document}
