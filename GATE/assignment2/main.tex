@@ -77,158 +77,175 @@
         voltage of the circuit as a function of time?
         \hfill{\brak{2010-PH}}
         \begin{enumerate}
-            \item  
-                \begin{center}
-                \begin{tikzpicture}[scale = 0.5]
-                    % Draw axes
-                    \draw[->] (-1,0) -- (3,0) node[right] {$x$}; % x-axis
-                    \draw[->] (0,-0.1) -- (0,1.1) node[above] {$y$}; % y-axis
+                \begin{multicols}{2}
+                \item  
+                    \begin{center}
+                        \begin{tikzpicture}[scale = 0.5]
+                            % Draw axes
+                            \draw[->] (-1,0) -- (3,0) node[right] {$x$}; % x-axis
+                            \draw[->] (0,-0.1) -- (0,1.1) node[above] {$y$}; % y-axis
 
-                    % Draw the function y = 1 - e^(-2x)
-                    \draw[black, thick, domain=0:3, samples=100] plot (\x, {1 - exp(-2*\x)});
-                \end{tikzpicture}
-                \end{center}
-            \item 
-                \begin{center}
-                    \begin{tikzpicture}[scale = 0.5]
-                        % Draw axes
-                        \draw[->] (-1,0) -- (3,0) node[right] {$t$}; % x-axis
-                        \draw[->] (0,-2) -- (0,2) node[above] {$V_{\text{out}}$}; % y-axis
+                            % Draw the function y = 1 - e^(-2x)
+                            \draw[black, thick, domain=0:3, samples=100] plot (\x, {1 - exp(-2*\x)});
+                        \end{tikzpicture}
+                    \end{center}
 
-                        % Draw the function y = -5x(x-2)
-                        \draw[black, thick, domain=0:2, samples=100] plot (\x, {-1 * \x*(\x-2)});
+                    \columnbreak
+                \item 
+                    \begin{center}
+                        \begin{tikzpicture}[scale = 0.5]
+                            % Draw axes
+                            \draw[->] (-1,0) -- (3,0) node[right] {$t$}; % x-axis
+                            \draw[->] (0,-2) -- (0,2) node[above] {$V_{\text{out}}$}; % y-axis
 
-                    \end{tikzpicture}               
-                \end{center}
-            \item 
-                \begin{center}
-                    \begin{tikzpicture}[scale=0.5]
-                        % Draw axes
-                        \draw[->] (-2,0) -- (6,0) node[right] {$t$}; % x-axis
-                        \draw[->] (0,-2) -- (0,3) node[above] {$V_{\text{out}}$}; % y-axis
+                            % Draw the function y = -5x(x-2)
+                            \draw[black, thick, domain=0:2, samples=100] plot (\x, {-1 * \x*(\x-2)});
 
-                        % Draw the line y = x
-                        \draw[black, thick] (0,0) -- (3,3);
-                        \draw[thick] (3,3) -- (5,3);
-                    \end{tikzpicture}
-                \end{center}
-            \item
-                \begin{center}
-                    \begin{tikzpicture}[scale=0.5]
-                        \draw[->] (0,0) -- (4,0) node[right] {$t$};
-                        \draw[->] (0,0) -- (0,2.5) node[left] {$V_{out}$};
+                        \end{tikzpicture}               
+                    \end{center}
+                \end{multicols}
+                \begin{multicols}{2}
 
-                        % The curve
-                        \draw[thick] (0.8,0) .. controls(1,0.2) .. (1,0.2) to[out=60,in=180] (2,2) ;
+                \item 
+                    \begin{center}
+                        \begin{tikzpicture}[scale=0.5]
+                            % Draw axes
+                            \draw[->] (-2,0) -- (6,0) node[right] {$t$}; % x-axis
+                            \draw[->] (0,-2) -- (0,3) node[above] {$V_{\text{out}}$}; % y-axis
 
-                    \end{tikzpicture}
-                \end{center}
+                            % Draw the line y = x
+                            \draw[black, thick] (0,0) -- (3,3);
+                            \draw[thick] (3,3) -- (5,3);
+                        \end{tikzpicture}
+                    \end{center}
+                    \columnbreak
+                \item
+                    \begin{center}
+                        \begin{tikzpicture}[scale=0.5]
+                            \draw[->] (0,0) -- (4,0) node[right] {$t$};
+                            \draw[->] (0,0) -- (0,2.5) node[left] {$V_{out}$};
 
+                            % The curve
+                            \draw[thick] (0.8,0) .. controls(1,0.2) .. (1,0.2) to[out=60,in=180] (2,2) ;
+
+                        \end{tikzpicture}
+                    \end{center}
+
+                \end{multicols}
         \end{enumerate}
-
     \item[41.] For any set of inputs, $A$ and $B$, the following circuits give the same output , $Q$, except
         one. Which one is it?
 
         \hfill{\brak{2010-PH}}
         \begin{enumerate}
-            \item  
+                \begin{multicols}{2}
 
-                \begin{center}
+                \item  
 
-                    \resizebox{0.3\textwidth}{!}{%
-                        \begin{circuitikz}
-                            \tikzstyle{every node}=[font=\LARGE]
-                    \draw (7.5,15.5) to[short] (7.75,15.5);
-                    \draw (7.5,15) to[short] (7.75,15);
-                    \draw (7.75,15.5) node[ieeestd xor port, anchor=in 1, scale=0.89](port){} (port.out) to[short] (9.5,15.25);
-                    \draw (5.75,15.5) to[short] (7.75,15.5);
-                    \draw (5.75,15) to[short] (7.75,15);
-                    \draw (6.75,13.25) to[short] (6.75,15);
-                    \draw (6.75,13.25) to[short] (9.5,13.25);
-                    \draw (9.75,13.25) node[ieeestd not port, anchor=in](port){} (port.out) to[short] (11.5,13.25);
-                    \draw (port.in) to[short] (9.5,13.25);
-                    \draw (9.5,15.25) to[short] (11.5,15.25);
-                    \draw (11.5,15.25) to[short] (13.5,15.25);
-                    \draw (11.5,13.25) to[short] (11.5,14.75);
-                    \draw (11.5,14.75) to[short] (13.5,14.75);
-                    \draw (13.5,15.25) to[short] (13.75,15.25);
-                    \draw (13.5,14.75) to[short] (13.75,14.75);
-                    \draw (13.75,15.25) node[ieeestd and port, anchor=in 1, scale=0.89](port){} (port.out) to[short] (15.5,15);
-                \end{circuitikz}
-                } 
-            \end{center}
-\item 
-        \begin{center}
-            
-        \resizebox{0.3\textwidth}{!}{%
-            \begin{circuitikz}
-                \tikzstyle{every node}=[font=\LARGE]
-                \draw (10.25,16.75) to[short] (10.5,16.75);
-                \draw (10.25,16.25) to[short] (10.5,16.25);
-                \draw (10.5,16.75) node[ieeestd and port, anchor=in 1, scale=0.89](port){} (port.out) to[short] (12.25,16.5);
-                \draw (8.5,16.25) node[ieeestd not port, anchor=in](port){} (port.out) to[short] (10.25,16.25);
-                \draw (port.in) to[short] (8.25,16.25);
-                \draw (8,16.75) to[short] (10,16.75);
-                \draw (8.5,16.75) to[short] (10.5,16.75);
-            \end{circuitikz}
-            }
-            
-        \end{center}
-\item
-        \begin{center}
+                    \begin{center}
 
-        \resizebox{0.3\textwidth}{!}{%
-            \begin{circuitikz}
-                \tikzstyle{every node}=[font=\LARGE]
-                \draw (13.25,17.5) to[short] (13.5,17.5);
-                \draw (13.25,17) to[short] (13.5,17);
-                \draw (13.5,17.5) node[ieeestd or port, anchor=in 1, scale=0.89](port){} (port.out) to[short] (15.25,17.25);
-                \draw (11.5,17.5) node[ieeestd not port, anchor=in](port){} (port.out) to[short] (13.25,17.5);
-                \draw (port.in) to[short] (11.25,17.5);
-                \draw (11.5,17) to[short] (13.5,17);
-                \draw (11.25,17) to[short] (13.25,17);
-            \end{circuitikz}
-            }
-        \end{center}
-    \item 
-        \begin{center}
-            \resizebox{0.3\textwidth}{!}{%
-                \begin{circuitikz}
-                    \tikzstyle{every node}=[font=\LARGE]
-                    \draw (13,18.25) to[short] (13.25,18.25);
-                    \draw (13,17.75) to[short] (13.25,17.75);
-                    \draw (13.25,18.25) node[ieeestd and port, anchor=in 1, scale=0.89](port){} (port.out) to[short] (15,18);
-                    \draw (11.25,17.75) node[ieeestd not port, anchor=in](port){} (port.out) to[short] (13,17.75);
-                    \draw (port.in) to[short] (11,17.75);
-                    \draw (9,18.75) to[short] (13,18.75);
-                    \draw (13,18.25) to[short] (13,18.75);
-                    \draw (9,17.75) to[short] (11,17.75);
-                    \draw (10,16.25) to[short] (10,18.75);
-                    \draw (13,16.75) to[short] (13.25,16.75);
-                    \draw (13,16.25) to[short] (13.25,16.25);
-                    \draw (13.25,16.75) node[ieeestd and port, anchor=in 1, scale=0.89](port){} (port.out) to[short] (15,16.5);
-                    \draw (10,16.25) to[short] (13,16.25);
-                    \draw (13,16.75) to[short] (13,17.75);
-                    \draw (15,16.5) to[short] (15.25,16.5);
-                    \draw (15,16) to[short] (15.25,16);
-                    \draw (15.25,16.5) node[ieeestd and port, anchor=in 1, scale=0.89](port){} (port.out) to[short] (17,16.25);
-                    \draw (15,16) to[short] (15,15.25);
-                    \draw (15,15.25) to[short] (11,15.25);
-                    \draw (11,15.25) to[short] (11,17.75);
-                    \draw (17,18) to[short] (17.25,18);
-                    \draw (17,17.5) to[short] (17.25,17.5);
-                    \draw (17.25,18) node[ieeestd or port, anchor=in 1, scale=0.89](port){} (port.out) to[short] (19,17.75);
-                    \draw (17,16.25) to[short] (17,17.5);
-                    \draw (15,18) to[short] (17,18);
-                \end{circuitikz}
-                }
-        \end{center}
+                        \resizebox{0.3\textwidth}{!}{%
+                            \begin{circuitikz}
+                                \tikzstyle{every node}=[font=\LARGE]
+                                \draw (7.5,15.5) to[short] (7.75,15.5);
+                                \draw (7.5,15) to[short] (7.75,15);
+                                \draw (7.75,15.5) node[ieeestd xor port, anchor=in 1, scale=0.89](port){} (port.out) to[short] (9.5,15.25);
+                                \draw (5.75,15.5) to[short] (7.75,15.5);
+                                \draw (5.75,15) to[short] (7.75,15);
+                                \draw (6.75,13.25) to[short] (6.75,15);
+                                \draw (6.75,13.25) to[short] (9.5,13.25);
+                                \draw (9.75,13.25) node[ieeestd not port, anchor=in](port){} (port.out) to[short] (11.5,13.25);
+                                \draw (port.in) to[short] (9.5,13.25);
+                                \draw (9.5,15.25) to[short] (11.5,15.25);
+                                \draw (11.5,15.25) to[short] (13.5,15.25);
+                                \draw (11.5,13.25) to[short] (11.5,14.75);
+                                \draw (11.5,14.75) to[short] (13.5,14.75);
+                                \draw (13.5,15.25) to[short] (13.75,15.25);
+                                \draw (13.5,14.75) to[short] (13.75,14.75);
+                                \draw (13.75,15.25) node[ieeestd and port, anchor=in 1, scale=0.89](port){} (port.out) to[short] (15.5,15);
+                            \end{circuitikz}
+                            } 
+                    \end{center}
+                    \columnbreak
+                \item 
+                    \begin{center}
 
+                        \resizebox{0.3\textwidth}{!}{%
+                            \begin{circuitikz}
+                                \tikzstyle{every node}=[font=\LARGE]
+                                \draw (10.25,16.75) to[short] (10.5,16.75);
+                                \draw (10.25,16.25) to[short] (10.5,16.25);
+                                \draw (10.5,16.75) node[ieeestd and port, anchor=in 1, scale=0.89](port){} (port.out) to[short] (12.25,16.5);
+                                \draw (8.5,16.25) node[ieeestd not port, anchor=in](port){} (port.out) to[short] (10.25,16.25);
+                                \draw (port.in) to[short] (8.25,16.25);
+                                \draw (8,16.75) to[short] (10,16.75);
+                                \draw (8.5,16.75) to[short] (10.5,16.75);
+                            \end{circuitikz}
+                            }
+
+                    \end{center}
+
+                \end{multicols}
+                \begin{multicols}{2}
+
+                \item
+                    \begin{center}
+                        \resizebox{0.3\textwidth}{!}{%
+                            \begin{circuitikz}
+                                \tikzstyle{every node}=[font=\LARGE]
+                                \draw (13,18.25) to[short] (13.25,18.25);
+                                \draw (13,17.75) to[short] (13.25,17.75);
+                                \draw (13.25,18.25) node[ieeestd and port, anchor=in 1, scale=0.89](port){} (port.out) to[short] (15,18);
+                                \draw (11.25,17.75) node[ieeestd not port, anchor=in](port){} (port.out) to[short] (13,17.75);
+                                \draw (port.in) to[short] (11,17.75);
+                                \draw (9,18.75) to[short] (13,18.75);
+                                \draw (13,18.25) to[short] (13,18.75);
+                                \draw (9,17.75) to[short] (11,17.75);
+                                \draw (10,16.25) to[short] (10,18.75);
+                                \draw (13,16.75) to[short] (13.25,16.75);
+                                \draw (13,16.25) to[short] (13.25,16.25);
+                                \draw (13.25,16.75) node[ieeestd and port, anchor=in 1, scale=0.89](port){} (port.out) to[short] (15,16.5);
+                                \draw (10,16.25) to[short] (13,16.25);
+                                \draw (13,16.75) to[short] (13,17.75);
+                                \draw (15,16.5) to[short] (15.25,16.5);
+                                \draw (15,16) to[short] (15.25,16);
+                                \draw (15.25,16.5) node[ieeestd and port, anchor=in 1, scale=0.89](port){} (port.out) to[short] (17,16.25);
+                                \draw (15,16) to[short] (15,15.25);
+                                \draw (15,15.25) to[short] (11,15.25);
+                                \draw (11,15.25) to[short] (11,17.75);
+                                \draw (17,18) to[short] (17.25,18);
+                                \draw (17,17.5) to[short] (17.25,17.5);
+                                \draw (17.25,18) node[ieeestd or port, anchor=in 1, scale=0.89](port){} (port.out) to[short] (19,17.75);
+                                \draw (17,16.25) to[short] (17,17.5);
+                                \draw (15,18) to[short] (17,18);
+                            \end{circuitikz}
+                            }
+                    \end{center}
+
+                    \columnbreak
+                \item 
+                    \begin{center}
+
+                        \resizebox{0.3\textwidth}{!}{%
+                            \begin{circuitikz}
+                                \tikzstyle{every node}=[font=\LARGE]
+                                \draw (13.25,17.5) to[short] (13.5,17.5);
+                                \draw (13.25,17) to[short] (13.5,17);
+                                \draw (13.5,17.5) node[ieeestd or port, anchor=in 1, scale=0.89](port){} (port.out) to[short] (15.25,17.25);
+                                \draw (11.5,17.5) node[ieeestd not port, anchor=in](port){} (port.out) to[short] (13.25,17.5);
+                                \draw (port.in) to[short] (11.25,17.5);
+                                \draw (11.5,17) to[short] (13.5,17);
+                                \draw (11.25,17) to[short] (13.25,17);
+                            \end{circuitikz}
+                            }
+                    \end{center}
+
+                \end{multicols}
             \end{enumerate}
 
-         \item[42.] $CO_2$ molecule has the first few energy levels uniformly separated by approximately
-             2.5 meV. At a temperature of $300K$, the ratio of the number of moleciles in the $4^{th}$
-             excited state to the number in the $2^{nd}$ excited state is about 
+        \item[42.] $CO_2$ molecule has the first few energy levels uniformly separated by approximately
+            2.5 meV. At a temperature of $300K$, the ratio of the number of moleciles in the $4^{th}$
+            excited state to the number in the $2^{nd}$ excited state is about 
             \hfill{\brak{2010-PH}}
             \begin{enumerate}
                 \item 0.5
@@ -297,13 +314,13 @@
                 \item $E^1 = 0, E^2$ depends in the sign of $V_0$
                 \item $E^1 < 0, E^2 < 0$
             \end{enumerate}
-\section{\textbf{Common Data Questions}}
-\textbf{Common Data for Questions 48 and 49}\\
-In the presence of a weak magnetic field, atomic hydrogen undergoes the transition :
-\begin{align}
-    {\quad}^2 P_{\frac{1}{2}} \rightarrow {\quad}^1 S_{\frac{1}{2}}
-\end{align}
-by the emmision of radiation.
+            \section{\textbf{Common Data Questions}}
+            \textbf{Common Data for Questions 48 and 49}\\
+            In the presence of a weak magnetic field, atomic hydrogen undergoes the transition :
+            \begin{align}
+                {\quad}^2 P_{\frac{1}{2}} \rightarrow {\quad}^1 S_{\frac{1}{2}}
+            \end{align}
+            by the emmision of radiation.
         \item[48.] The number of lines that are observed in the Zeeman spectrum is
             \hfill{\brak{2010-PH}}
             \begin{enumerate}
@@ -333,6 +350,8 @@ by the emmision of radiation.
         \item[50.] The specific heat of the photon gas varies with temperature as 
             \hfill{\brak{2010-PH}}
             \begin{enumerate}
+                    \begin{multicols}{2}
+                
                 \item 
                     \begin{center}
                         \begin{tikzpicture}[scale = 0.5]
@@ -344,6 +363,7 @@ by the emmision of radiation.
                             \draw[domain=0:2,smooth,variable=\x,black] plot ({\x},{0.5*\x*\x});
                         \end{tikzpicture}
                     \end{center}
+                    \columnbreak
                 \item 
                     \begin{center}
                         \begin{tikzpicture}[scale = 0.5]
@@ -355,6 +375,9 @@ by the emmision of radiation.
                             \draw[black, thick, domain=0:3, samples=100] plot (\x, {1 - exp(-2*\x)});
                         \end{tikzpicture}
                     \end{center}
+            \end{multicols}
+                    \begin{multicols}{2}
+                
                 \item 
                     \begin{center}
                         \begin{tikzpicture}[scale = 0.5]
@@ -366,6 +389,7 @@ by the emmision of radiation.
                             \draw[domain=0.35:3.2,smooth,variable=\x,black] plot ({\x},{1/\x});
                         \end{tikzpicture}
                     \end{center}
+                    \columnbreak
                 \item 
                     \begin{center}
                         \begin{tikzpicture}[scale = 0.5]
@@ -377,6 +401,7 @@ by the emmision of radiation.
                             \draw[domain=0:5,smooth,variable=\x,black,thick] plot ({\x},{5*\x*\x*exp(-1.5*\x)});
                         \end{tikzpicture}
                     \end{center}
+            \end{multicols}
             \end{enumerate}
 
         \item[51.] The pressure of the photon gas is
