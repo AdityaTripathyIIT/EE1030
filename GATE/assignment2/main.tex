@@ -61,8 +61,8 @@
 \begin{enumerate}
     \item[40.] The figure shows a current source charging a capacitor that is initially uncharged
         \begin{center}
-            \resizebox{0.5\textwidth}{!}{%
-                \begin{circuitikz}[scale = 0.5]
+            \resizebox{0.2\textwidth}{!}{%
+                \begin{circuitikz}
                     \tikzstyle{every node}=[font=\LARGE]
                     \draw (7.5,16.5) to[american current source] (7.5,18.75);
                     \draw (7.5,16.5) to (7.5,14.75) node[ground]{};
@@ -135,7 +135,7 @@
 
                 \begin{center}
 
-                    \resizebox{0.5\textwidth}{!}{%
+                    \resizebox{0.3\textwidth}{!}{%
                         \begin{circuitikz}
                             \tikzstyle{every node}=[font=\LARGE]
                     \draw (7.5,15.5) to[short] (7.75,15.5);
@@ -160,7 +160,7 @@
 \item 
         \begin{center}
             
-        \resizebox{0.5\textwidth}{!}{%
+        \resizebox{0.3\textwidth}{!}{%
             \begin{circuitikz}
                 \tikzstyle{every node}=[font=\LARGE]
                 \draw (10.25,16.75) to[short] (10.5,16.75);
@@ -177,7 +177,7 @@
 \item
         \begin{center}
 
-        \resizebox{0.5\textwidth}{!}{%
+        \resizebox{0.3\textwidth}{!}{%
             \begin{circuitikz}
                 \tikzstyle{every node}=[font=\LARGE]
                 \draw (13.25,17.5) to[short] (13.5,17.5);
@@ -190,41 +190,38 @@
             \end{circuitikz}
             }
         \end{center}
-\item 
+    \item 
         \begin{center}
-        \resizebox{0.5\textwidth}{!}{%
-            \begin{circuitikz}
-                \tikzstyle{every node}=[font=\LARGE]
-                \draw (13,18.25) to[short] (13.25,18.25);
-                \draw (13,17.75) to[short] (13.25,17.75);
-                \draw (13.25,18.25) node[ieeestd and port, anchor=in 1, scale=0.89](port){} (port.out) to[short] (15,18);
-                \draw (11.25,17.75) node[ieeestd not port, anchor=in](port){} (port.out) to[short] (13,17.75);
-                \draw (port.in) to[short] (11,17.75);
-                \draw (9,18.75) to[short] (13,18.75);
-                \draw (13,18.25) to[short] (13,18.75);
-                \draw (9,17.75) to[short] (11,17.75);
-                \draw (10,16.25) to[short] (10,18.75);
-                \draw (13,16.75) to[short] (13.25,16.75);
-                \draw (13,16.25) to[short] (13.25,16.25);
-                \draw (13.25,16.75) node[ieeestd and port, anchor=in 1, scale=0.89](port){} (port.out) to[short] (15,16.5);
-                \draw (10,16.25) to[short] (13,16.25);
-                \draw (13,16.75) to[short] (13,17.75);
-                \draw (15,16.5) to[short] (15.25,16.5);
-                \draw (15,16) to[short] (15.25,16);
-                \draw (15.25,16.5) node[ieeestd and port, anchor=in 1, scale=0.89](port){} (port.out) to[short] (17,16.25);
-                \draw (15,16) to[short] (15,15.25);
-                \draw (15,15.25) to[short] (11,15.25);
-                \draw (11,15.25) to[short] (11,17.75);
-                \draw (17,18) to[short] (17.25,18);
-                \draw (17,17.5) to[short] (17.25,17.5);
-                \draw (17.25,18) node[ieeestd or port, anchor=in 1, scale=0.89](port){} (port.out) to[short] (19,17.75);
-                \draw (17,16.25) to[short] (17,17.5);
-                \draw (15,18) to[short] (17,18);
-                \node [font=\LARGE] at (8.25,18.75) {A};
-                \node [font=\LARGE] at (8.25,17.75) {B};
-                \node [font=\LARGE] at (19.75,17.75) {Q};
-            \end{circuitikz}
-            }
+            \resizebox{0.3\textwidth}{!}{%
+                \begin{circuitikz}
+                    \tikzstyle{every node}=[font=\LARGE]
+                    \draw (13,18.25) to[short] (13.25,18.25);
+                    \draw (13,17.75) to[short] (13.25,17.75);
+                    \draw (13.25,18.25) node[ieeestd and port, anchor=in 1, scale=0.89](port){} (port.out) to[short] (15,18);
+                    \draw (11.25,17.75) node[ieeestd not port, anchor=in](port){} (port.out) to[short] (13,17.75);
+                    \draw (port.in) to[short] (11,17.75);
+                    \draw (9,18.75) to[short] (13,18.75);
+                    \draw (13,18.25) to[short] (13,18.75);
+                    \draw (9,17.75) to[short] (11,17.75);
+                    \draw (10,16.25) to[short] (10,18.75);
+                    \draw (13,16.75) to[short] (13.25,16.75);
+                    \draw (13,16.25) to[short] (13.25,16.25);
+                    \draw (13.25,16.75) node[ieeestd and port, anchor=in 1, scale=0.89](port){} (port.out) to[short] (15,16.5);
+                    \draw (10,16.25) to[short] (13,16.25);
+                    \draw (13,16.75) to[short] (13,17.75);
+                    \draw (15,16.5) to[short] (15.25,16.5);
+                    \draw (15,16) to[short] (15.25,16);
+                    \draw (15.25,16.5) node[ieeestd and port, anchor=in 1, scale=0.89](port){} (port.out) to[short] (17,16.25);
+                    \draw (15,16) to[short] (15,15.25);
+                    \draw (15,15.25) to[short] (11,15.25);
+                    \draw (11,15.25) to[short] (11,17.75);
+                    \draw (17,18) to[short] (17.25,18);
+                    \draw (17,17.5) to[short] (17.25,17.5);
+                    \draw (17.25,18) node[ieeestd or port, anchor=in 1, scale=0.89](port){} (port.out) to[short] (19,17.75);
+                    \draw (17,16.25) to[short] (17,17.5);
+                    \draw (15,18) to[short] (17,18);
+                \end{circuitikz}
+                }
         \end{center}
 
             \end{enumerate}
@@ -351,8 +348,8 @@ by the emmision of radiation.
                     \begin{center}
                         \begin{tikzpicture}[scale = 0.5]
                             % Draw axes
-                            \draw[->] (-1,0) -- (3,0) node[right] {$T$}; % x-axis
-                            \draw[->] (0,-0.1) -- (0,1.1) node[above] {$C_v$}; % y-axis
+                            \draw[->] (0,0) -- (3,0) node[right] {$T$}; % x-axis
+                            \draw[->] (0,0) -- (0,1.1) node[above] {$C_v$}; % y-axis
 
                             % Draw the function y = 1 - e^(-2x)
                             \draw[black, thick, domain=0:3, samples=100] plot (\x, {1 - exp(-2*\x)});
@@ -362,16 +359,16 @@ by the emmision of radiation.
                     \begin{center}
                         \begin{tikzpicture}[scale = 0.5]
                             % Draw the axes
-                            \draw[->] (-3,0) -- (3,0) node[right] {$T$};
-                            \draw[->] (0,-3) -- (0,3) node[above] {$C_v$};
+                            \draw[->] (0,0) -- (3,0) node[right] {$T$};
+                            \draw[->] (0,0) -- (0,3) node[above] {$C_v$};
 
                             % Draw the function y = 1/x
-                            \draw[domain=0.3:3.5,smooth,variable=\x,black] plot ({\x},{1/\x});
+                            \draw[domain=0.35:3.2,smooth,variable=\x,black] plot ({\x},{1/\x});
                         \end{tikzpicture}
                     \end{center}
                 \item 
                     \begin{center}
-                        \begin{tikzpicture}
+                        \begin{tikzpicture}[scale = 0.5]
                             % Draw the axes
                             \draw[->] (0,0) -- (5,0) node[right] {$T$};
                             \draw[->] (0,0) -- (0,1.2) node[above] {$C_v$};
