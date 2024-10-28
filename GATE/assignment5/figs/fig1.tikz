@@ -1,0 +1,24 @@
+\begin{circuitikz}
+    \tikzstyle{every node}=[font=\LARGE]
+    \draw [ line width=1.9pt](1.75,20.75) to[short] (1.75,11);
+    \draw [ line width=1.3pt](1.75,11) to[short] (10,11);
+    \draw [ line width=1.6pt](9.75,11) to[short] (13.25,11);
+    \draw [ line width=1.6pt](3.75,16.75) to[short] (9.75,16.75);
+    \draw [ line width=1.6pt](9.75,16.75) to[short] (12.75,16.75);
+    \draw [line width=1.6pt, short] (2.75,11) -- (3.75,16.75);
+    \draw [line width=1.6pt, short] (1.75,19.75) -- (3.75,16.75);
+    \draw [line width=1.6pt, short] (1.75,19.75) -- (12,16.75);
+    \draw [line width=1.6pt, dashed] (9.25,17.5) -- (9.25,11);
+    \draw [line width=1.6pt, dashed] (9.25,17.5) -- (1.75,17.5);
+    \draw [line width=1.6pt, dashed] (3.25,17.5) -- (3,11);
+    \node [font=\LARGE] at (6,19.5) {L};
+    \node [font=\LARGE] at (3.7,18.5) {$L + \alpha$};
+    \node [font=\LARGE] at (2.5,15) {$\alpha$};
+    \node [font=\LARGE] at (3,10.5) {10};
+    \node [font=\LARGE] at (9,10.5) {30};
+    \draw [line width=1.6pt, ->, >=Stealth] (3.75,9.5) -- (9.5,9.5);
+    \node [font=\LARGE] at (10.5,9.5) {$    wt. \% B$};
+    \node [font=\LARGE] at (0.5,17.5) {1000};
+    \node [font=\LARGE, rotate around={90:(0,0)}] at (0.5,15) {Temperature in$^{\degree}C\quad\quad$              };
+\end{circuitikz}
+
