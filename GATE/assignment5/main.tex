@@ -1,0 +1,309 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal,12pt,onecolumn]{IEEEtran}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{amsmath}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{multicol}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{circuitikz}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+\usepackage{gvv}                                        
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{float}
+
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+
+\begin{document}
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+\title{2014-XE-14-26}
+\author{EE24BTECH11001 -  ADITYA TRIPATHY}
+\maketitle
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+
+\begin{enumerate}
+    \item[10.] 
+        Polymerized isotactic polybutadiene has a molecular weight of $3 \times 10^5 g/mol$. The degree of
+        polymerization is
+        \hfill{\brak{2014-XE}}
+\\
+    \item[11.]  A bar of $Ti$ with Young's modulus of 110 $GPa$ and yield strength of $880 MPa$ is tested in tension. It
+        is noticed that the alloy does not exhibit any strain hardening and fails at a total strain of 0.108. The
+        mechanical energy that is necessary to break the material in $MJ/m^3$ is		
+        \hfill{\brak{2014-XE}}
+\\
+    \item[12.] A copper cup weighing 140 g contains 80 g of water at 4 $^{\degree}C$. Specific heats of water and copper are
+        4.18 and 0.385 J/g $^{\degree}C$, respectively. If 100 g of water that is at 90 $^{\degree}C$ is added to the cup, the final
+        temperature of water in $^{\degree}C$ is
+        \hfill{\brak{2014-XE}}
+        \\
+
+    \item[13.] Match the reaction in $\textbf{Column I}$ with its name in $\textbf{Column II}$.\\
+        L - liquid $\alpha, \beta, \gamma -$ different solid solution phases
+
+        \begin{multicols}{2}
+            \textbf{Column I} \columnbreak
+            \textbf{Column II}
+        \end{multicols}
+        \begin{multicols}{2}
+            \begin{enumerate}
+                \item[P.] L $\xrightarrow{cooling}$ $\quad \alpha + \beta$ \columnbreak
+                \item[1.] peritectic
+            \end{enumerate}
+
+        \end{multicols}
+        \begin{multicols}{2}
+            \begin{enumerate}
+                \item[Q.] L $+ \beta \xrightarrow{cooling}$ $\quad \gamma$ \columnbreak
+                \item[2.] eutectic
+            \end{enumerate}
+
+        \end{multicols}
+        \begin{multicols}{2}
+            \begin{enumerate}
+                \item[R.]  $\alpha \xrightarrow{cooling}$ $\quad \beta + \gamma$ \columnbreak
+                \item[3.] monotectic
+            \end{enumerate}
+
+        \end{multicols}
+        \begin{multicols}{2}
+            \begin{enumerate}
+                \item[]\columnbreak
+                \item[1.] eutectoid
+            \end{enumerate}
+
+        \end{multicols}
+        \hfill{\brak{2014-XE}}
+        \begin{enumerate}
+                \begin{multicols}{2}
+                \item P-1, Q-4, R-3 \columnbreak 
+                \item P-2, Q-1, R-4 
+                \end{multicols} 
+                \begin{multicols}{2}
+                \item P-2, Q-3, R-1 \columnbreak 
+                \item P-4, Q-2, R-3 
+                \end{multicols}
+        \end{enumerate}
+    \item[14.] The Young's modulus of a unidirectional $SiC$ fiber reinforced $Ti$ matrix is 185 $GPa$.
+        If the Young's modulii of $Ti$ and $SiC$ are 110 and 360 $GPa$ respectively, the volume fraction
+        of fibers in the composite is 
+
+        \hfill{\brak{2014-XE}}
+        
+
+
+    \item[15.] Match the composite in \textbf{Column I} with the most suitable application in 
+        \textbf{Column II}
+\begin{multicols}{2}
+            \textbf{Column I} \columnbreak
+            \textbf{Column II}
+        \end{multicols}
+        \begin{multicols}{2}
+            \begin{enumerate}
+                \item[P.] Glass fibre reinforced plastic \columnbreak
+                \item[1.] Missile cone heads
+            \end{enumerate}
+
+        \end{multicols}
+        \begin{multicols}{2}
+            \begin{enumerate}
+                \item[Q.] $SiC$ particle reiforced $Al$ alloy \columnbreak
+                \item[2.] Commercial automobile chasis
+            \end{enumerate}
+
+        \end{multicols}
+        \begin{multicols}{2}
+            \begin{enumerate}
+                \item[R.]  Carbon-carbon composite \columnbreak
+                \item[3.] Airplane wheel tyres
+            \end{enumerate}
+
+        \end{multicols}
+        \begin{multicols}{2}
+            \begin{enumerate}
+                \item[S.] Metal fibre reinforced rubber\columnbreak
+                \item[4.]  Car piston rings 
+            \end{enumerate}
+
+        \end{multicols}
+        \begin{multicols}{2}
+            \begin{enumerate}
+                \item[]\columnbreak
+                \item[5.]  High performance skate boards
+            \end{enumerate}
+
+        \end{multicols}
+
+        \hfill{\brak{2014-XE}}
+        \begin{enumerate}
+                \begin{multicols}{2}
+                \item P-4, Q-5, R-1, S-2 \columnbreak 
+                \item P-3, Q-5, R-2, S-4 
+                \end{multicols} 
+                \begin{multicols}{2}
+                \item P-5, Q-4, R-1, S-3 \columnbreak 
+                \item P-4, Q-2, R-3, S-1
+                \end{multicols}
+        \end{enumerate}
+
+    \item[16.] Which among the following rules need to be satisfied for obtaining an isomorphous phase diagram
+in a binary alloy system? 
+            \begin{enumerate}
+                \item[P.] The atomic size difference should be less than $15\%$ 
+                \item[Q.] Both the end components should have the same crystal structure
+                \item[R.] The valency of the end components should be the same
+                \item[S.] The end components should have dissimilar electronegativities
+            \end{enumerate}
+        \hfill{\brak{2014-XE}}
+        \begin{multicols}{4}
+            \begin{enumerate}
+                \item  P, Q, R \columnbreak
+                \item  Q, R, S \columnbreak
+                \item  R, S, P  \columnbreak
+                \item  S, P, Q
+            \end{enumerate}
+        \end{multicols}
+
+
+    \item[17.] The energy in $eV$ and the wavelength in $\mu$m, respectively, of the photon emitted when an electron
+in a hydrogen atom falls from $n = 4$ to $n = 2$ state is
+        \hfill{\brak{2014-XE}}
+        \begin{multicols}{4}
+            \begin{enumerate}
+                \item  3.0, 0.413 \columnbreak
+                \item  2.55, 0.365 \columnbreak
+                \item  2.75, 0.451  \columnbreak
+                \item  2.55, 0.487
+            \end{enumerate}
+        \end{multicols}
+
+    \item[18.]  The weight in $kg$ of gallium $\brak{Ga}$ to be mixed with arsenic $\brak{As}$ for obtaining 1.0 kg of gallium
+        arsenide $\brak{GaAs}$ is
+        %\raggedright{M_{Ga} = 69.72 g/mol\; M_{As} = 74.92 g/mol}
+        \hfill{\brak{2014-XE}}
+
+    \item[19.] Match the material in \textbf{Column I} with the property in \textbf{Column II}
+\begin{multicols}{2}
+            \textbf{Column I} \columnbreak
+            \textbf{Column II}
+        \end{multicols}
+        \begin{multicols}{2}
+            \begin{enumerate}
+                \item[P.]  $Pb\brak{Zr, Ti}O_3$\columnbreak
+                \item[1.] Shape memory alloy
+            \end{enumerate}
+
+        \end{multicols}
+        \begin{multicols}{2}
+            \begin{enumerate}
+                \item[Q.] $Ni_{50}Ti_{50} $\columnbreak
+                \item[2.] Piezoelectric ceramic
+            \end{enumerate}
+
+        \end{multicols}
+        \begin{multicols}{2}
+            \begin{enumerate}
+                \item[R.]  $GaAs$ \columnbreak
+                \item[3.] High temperature superconductor
+            \end{enumerate}
+
+        \end{multicols}
+        \begin{multicols}{2}
+            \begin{enumerate}
+                \item[S.] $YBa_2Cu_3O_7$\columnbreak
+                \item[4.]  Optoelectronic semiconductor 
+            \end{enumerate}
+
+        \end{multicols}
+        
+
+        \hfill{\brak{2014-XE}}
+        \begin{enumerate}
+                \begin{multicols}{2}
+                \item P-4, Q-5, R-1, S-2 \columnbreak 
+                \item P-3, Q-5, R-2, S-4 
+                \end{multicols} 
+                \begin{multicols}{2}
+                \item P-5, Q-4, R-1, S-3 \columnbreak 
+                \item P-4, Q-2, R-3, S-1
+                \end{multicols}
+        \end{enumerate}
+
+        \hfill{\brak{2014-XE}}
+
+    \item[20.] Relevant portion of a binary phase diagram of elements A and B is shown below. The mass fraction
+        of liquid phase at $1000 ^ {\degree}C$ for an alloy with 15 wt.$\% B$ is
+        \hfill{\brak{2014-XE}}
+        \begin{center}
+            \resizebox{0.5\textwidth}{!}{%
+                \begin{circuitikz}
+                    \tikzstyle{every node}=[font=\LARGE]
+                    \draw [ line width=1.9pt](1.75,20.75) to[short] (1.75,11);
+                    \draw [ line width=1.3pt](1.75,11) to[short] (10,11);
+                    \draw [ line width=1.6pt](9.75,11) to[short] (13.25,11);
+                    \draw [ line width=1.6pt](3.75,16.75) to[short] (9.75,16.75);
+                    \draw [ line width=1.6pt](9.75,16.75) to[short] (12.75,16.75);
+                    \draw [line width=1.6pt, short] (2.75,11) -- (3.75,16.75);
+                    \draw [line width=1.6pt, short] (1.75,19.75) -- (3.75,16.75);
+                    \draw [line width=1.6pt, short] (1.75,19.75) -- (12,16.75);
+                    \draw [line width=1.6pt, dashed] (9.25,17.5) -- (9.25,11);
+                    \draw [line width=1.6pt, dashed] (9.25,17.5) -- (1.75,17.5);
+                    \draw [line width=1.6pt, dashed] (3.25,17.5) -- (3,11);
+                    \node [font=\LARGE] at (6,19.5) {L};
+                    \node [font=\LARGE] at (3.5,18.5) {$L + \alpha$};
+                    \node [font=\LARGE] at (2.5,15) {$\alpha$};
+                    \node [font=\LARGE] at (3,10.5) {10};
+                    \node [font=\LARGE] at (9,10.5) {30};
+                    \draw [line width=1.6pt, ->, >=Stealth] (3.75,9.5) -- (9.5,9.5);
+                    \node [font=\LARGE] at (10.5,9.5) {$    wt. \% B$};
+                    \node [font=\LARGE] at (0.5,17.5) {1000};
+                    \node [font=\LARGE, rotate around={90:(0,0)}] at (0.5,15) {Temperature in$^{\degree}C$              };
+                \end{circuitikz}
+                }%
+        \end{center}
+    \item[21.] The expected diffraction angle $\brak{\textnormal{in degrees}}$for the first order reflection from the $\brak{113}$ set of planes
+        for face centered cubic Pt $\brak{\textnormal{lattice parameter = 0.392 nm}}$ using monochromatic radiation of
+        wavelength 0.1542 nm is
+            \hfill{\brak{2014-XE}}
+        \item[22.] The diffusion coefficients of i$Mg$ in $Al$ at 500 and $550^{\degree}C$ are $1.9\times 10^{-13}$
+            and $5.8\times 10^{-13} m^2/s$ respectively. The activation energy for diffusion of $Mg$ in $Al$ in $kJ/mol$ is
+        \hfill{\brak{2014-XE}}
+        \end{enumerate}
+\end{document}
