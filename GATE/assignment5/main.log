@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Arch Linux) (preloaded format=pdflatex 2024.10.9)  28 OCT 2024 23:22
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Arch Linux) (preloaded format=pdflatex 2024.10.9)  29 OCT 2024 13:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1399,7 +1399,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 72--77
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf-dist/fon
 ts/enc/dvips/base/8r.enc}] (./figs/fig1.tikz
 LaTeX Font Info:    Calculating math sizes for size <20> on input line 15.
-) [2] [3] (./main.aux)
+) [2] (./main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2020/03/25>
@@ -1408,23 +1408,23 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 47086 strings out of 474116
- 1096485 string characters out of 5750249
+ 47087 strings out of 474116
+ 1096537 string characters out of 5750249
  1949187 words of memory out of 5000000
- 68684 multiletter control sequences out of 15000+600000
+ 68686 multiletter control sequences out of 15000+600000
  628291 words of font info for 185 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 99i,12n,101p,1172b,988s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 99i,18n,101p,1172b,988s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb></usr/share/texmf
 -dist/fonts/type1/public/txfonts/rtxr.pfb></usr/share/texmf-dist/fonts/type1/pu
 blic/txfonts/txex.pfb></usr/share/texmf-dist/fonts/type1/public/txfonts/txsy.pf
 b></usr/share/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texmf-dis
 t/fonts/type1/urw/times/utmr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times
 /utmri8a.pfb>
-Output written on main.pdf (3 pages, 57962 bytes).
+Output written on main.pdf (2 pages, 58182 bytes).
 PDF statistics:
- 102 PDF objects out of 1000 (max. 8388607)
- 82 compressed objects within 1 object stream
- 37 named destinations out of 1000 (max. 500000)
+ 95 PDF objects out of 1000 (max. 8388607)
+ 76 compressed objects within 1 object stream
+ 36 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
