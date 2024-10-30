@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Arch Linux) (preloaded format=pdflatex 2024.10.9)  30 OCT 2024 12:42
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Arch Linux) (preloaded format=pdflatex 2024.10.9)  30 OCT 2024 22:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1414,19 +1414,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 149--155
  []
 
 
-Overfull \hbox (143.3411pt too wide) in paragraph at lines 155--161
-[]\OT1/txr/m/n/12 The pres-sure ra-tio across a gas tur-bine $[]$
- []
+Underfull \hbox (badness 10000) in paragraph at lines 155--160
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 155--161
-
- []
-
-
-Overfull \hbox (191.89212pt too wide) in paragraph at lines 162--168
-[]\OT1/txr/m/n/12 Moist air is treated as an ideal gas mix-ture of wa-ter va-po
-r and dry air $[]$.
  []
 
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf-dist/fon
@@ -1442,7 +1431,7 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 Here is how much of TeX's memory you used:
  47206 strings out of 474116
  1095706 string characters out of 5750249
- 1959187 words of memory out of 5000000
+ 1958187 words of memory out of 5000000
  68786 multiletter control sequences out of 15000+600000
  618268 words of font info for 154 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
@@ -1453,7 +1442,7 @@ blic/txfonts/txex.pfb></usr/share/texmf-dist/fonts/type1/public/txfonts/txsy.pf
 b></usr/share/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texmf-dis
 t/fonts/type1/urw/times/utmr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times
 /utmri8a.pfb>
-Output written on main.pdf (2 pages, 61279 bytes).
+Output written on main.pdf (2 pages, 60947 bytes).
 PDF statistics:
  102 PDF objects out of 1000 (max. 8388607)
  83 compressed objects within 1 object stream
