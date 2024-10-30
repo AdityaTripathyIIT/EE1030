@@ -1,0 +1,214 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal,12pt,onecolumn]{IEEEtran}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{amsmath}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{multicol}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+\usepackage{gvv}                                        
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{circuitikz}
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{censor}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{float}
+
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+
+\begin{document}
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+\title{2017-ME-27-39}
+\author{EE24BTECH11001 -  ADITYA TRIPATHY}
+\maketitle
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+
+\begin{enumerate}
+    \item 
+        For the vector $\vec{V} = 2yz\vec{i} + 3xz\vec{j} + 4xy\vec{k}$, the value of 
+        $\nabla \cdot \brak{\nabla \times \vec{V}}$ is 
+        \hfill{\brak{2017-ME}}
+\\
+    \item A parametric curve defined by $x = \cos\brak{\frac{\pi u}{2}}, y = \sin\brak{\frac{\pi u}{2}}$ 
+        in the range $0 \le u \le 1$ is rotated about the $x$-axis by 360 degrees. Area of the surface 
+        generated is
+
+        \hfill{\brak{2017-ME}}
+        \begin{multicols}{4}
+            \begin{enumerate}
+                \item $\frac{\pi}{2}$
+                    \columnbreak
+                \item $\pi$
+                    \columnbreak
+                \item $2\pi$
+                    \columnbreak
+                \item $4\pi$
+            \end{enumerate}
+        \end{multicols}
+    \item $P\brak{0, 3}, Q\brak{0.5, 4},$ and $R\brak{1, 5}$ are three points on the defined by $f\brak{x}$.
+        Numerical integration is carried out using bothe trapezoidal rule and Simpson's rule within limits
+        $x = 0$ and $x = 1$ for the curve. The difference between the two results will be
+        \hfill{\brak{2017-ME}}
+        \begin{multicols}{4}
+            \begin{enumerate}
+                \item 0
+                    \columnbreak
+                \item 0.25
+                    \columnbreak
+                \item 0.5
+                    \columnbreak
+                \item 1
+            \end{enumerate}
+        \end{multicols}
+    \item The velocity profile inside the boundary layer flow for flow over a flat plate is given by 
+        $\frac{u}{u_{\infty}}$ is the free stream velocity and $\delta$ is the local boundary layer
+        thickness, If $\delta ^*$ is the local displacement thickness, the value of $\frac{\delta ^ *}{\delta}$ is
+        \hfill{\brak{2017-ME}}
+        \begin{multicols}{4}
+            \begin{enumerate}
+                \item $\frac{2}{\pi}$
+                    \columnbreak
+                \item 1 - $\frac{2}{\pi}$
+                    \columnbreak
+                \item 1 + $\frac{2}{\pi}$
+                    \columnbreak
+                \item 0
+            \end{enumerate}
+        \end{multicols}
+    \item Consider steady flow of an incompressible fluid through two long and straight pipes of 
+        diameters $d_1$ and $d_2$ arranged in series. Both pipes are of equal lenght and the flow is 
+        turbulent in both pipes. The friction factor for turbulent flow thorught pipes is of the form 
+        $f = K\brak{Re}^{-n}$, where $K$ and $n$ are known positive constants and $Re$ is the Reynolds
+        number. Neglecting minor losses, the ration of the frictional pressure drop in pipe 1 to 
+        that in pipe 2, $\frac{\Delta P_1}{\Delta P_2}$, is given by
+        \hfill{\brak{2017-ME}}
+
+        \begin{multicols}{4}
+            \begin{enumerate}
+                \item $\brak{\frac{d_2}{d_1}}^{\brak{5-n}}$
+                    \columnbreak
+                \item $\brak{\frac{d_2}{d_1}}^5$
+                    \columnbreak
+                \item $\brak{\frac{d_2}{d_1}}^{\brak{3-n}}$
+                    \columnbreak
+                \item $\brak{\frac{d_2}{d_1}}^{\brak{5+n}}$
+            \end{enumerate}
+        \end{multicols}
+
+    \item For a steady flow, the velocity field is $\vec{V} = \brak{-x^2 + 3z}\vec{i} + \brak{2xy}\vec{j}$.
+        The magnitude of the acceleration of a particle at $\brak{1, -1}$ is
+        \hfill{\brak{2017-ME}}
+        \begin{multicols}{4}
+            \begin{enumerate}
+                \item 2
+                    \columnbreak
+                \item 1
+                    \columnbreak
+                \item $2\sqrt{5}$
+                    \columnbreak
+                \item 0
+            \end{enumerate}
+        \end{multicols}
+
+    \item One kg of an ideal gas $\brak{\textnormal{gas constant, R = 400J/kg K; specific
+        heat at constant volume} c_v = 1000 J/kg K}$ at 1 bar, and 300K is contained in a sealed rigid 
+        cylinder. During an adiabatic processs, 100$kJ$ of work is done on the system by a stirrer. 
+        The increase in entropy of the system is 
+        \hfill{\brak{2017-ME}}
+   \\     
+    \item The pressure ratio across a gas turbine $\brak{\text
+        {for air, specific heat at constant pressure,}c_p = 1040J/kg K and ratio of specific heats \gamma = 1.4}$ is
+        10. If the inlet temperature to the turbine is 1200 K and the isoentropic efficiency is 0,9, the gas 
+        temperature at turbine exit is 
+        \hfill{\brak{2017-ME}}
+   \\     
+        
+    \item Moist air is treated as an ideal gas mixture of water vapor and dry air 
+        $\brak{\text{molecular weight of air = 28.84 and molecular weight of water = 18}}$. At a 
+        location, the total pressure is 100$kPa$, the temperature is $30 ^{\degree}$ and the 
+        relative humidity is $55\%$. Given that the saturation pressure of water at $30 ^{\degree}$
+        is $42646 Pa$, the mass of water vapor per kg of dry air is
+        \hfill{\brak{2017-ME}}
+        
+
+    \item Air contains $79\% N_2$ and $21 \% O_2$ on a molar basis. Methane $\brak{CH_4}$ is 
+        burned with $50\%$ excess air than required stoichiometrically. Assuming complete combustion 
+        of methane, the molar percentage of $N_2$ in the products is
+        \hfill{\brak{2017-ME}}
+        
+    \item Two black surfaces, $AB$ and $BC$, of lengths $5m$ amd $6m$, respectively, are oriented as shown.
+        Both surfaces extend infinitely into the third dimension. Given that view factor 
+        $F_{12} = 0.5, T_1 = 800K, T_2 = 600K, T_{surrounding} = 300K$ and Stefan Boltzman constant
+        $\sigma = 5.67 \times 10^{-8} W/\brak{m^2 K^4}$ the heat transfer from Surface 2 to the surrounding
+        environment is $\brak{\text{in} kW}$
+        \hfill{\brak{2017-ME}}
+        \begin{center}
+            \resizebox{0.5\textwidth}{!}{
+                \input{figs/fig1.tikz}
+            } 
+        \end{center} 
+    \item Heat is generated uniformly in a long solid cylindrical rod $\brak{\text{diameter} = 10mm}$
+        at the rate of $4 \times 10^7 W/m^3$. The thermal conductivity of the rod material is 25 $W/m K$. Under
+        steady state conditions, the temperature difference between the centre and the surface of the rod is
+        $\brak{\text{in} \quad^{\degree}C}$
+        \hfill{\brak{2017-ME}}
+
+    \item An initially stress free massless elastic beam of length $L$ and circular cross-section
+        with diameter $d$ \brak{d << L} is held fixed between two walls as showm. The beam material
+        has Young's modulus E and coefficient of thermal expansion $\alpha$. If the beam is slowly and
+        uniformly heated, the temperatture rise required to cause the beam to buckle is proportional to
+        \begin{center}
+            \resizebox{0.5\textwidth}{!}{
+                \input{figs/fig2.tikz}
+            } 
+        \end{center}
+        \hfill{\brak{2017-ME}}
+        \begin{multicols}{4}
+            \begin{enumerate}
+                \item $d$
+                    \columnbreak
+                \item $d^2$
+                    \columnbreak
+                \item $d^3$
+                    \columnbreak
+                \item $d^4$
+            \end{enumerate}
+        \end{multicols}
+\end{enumerate}
+\end{document}

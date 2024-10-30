@@ -1,0 +1,26 @@
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\LARGE]
+\draw [short] (2,11) -- (6.25,17.25);
+\draw [short] (2,11) -- (9,11);
+\draw [short] (2.75,11) -- (2.25,10.25);
+\draw [short] (3.75,11) -- (3.25,10.25);
+\draw [short] (5,11) -- (4.5,10.25);
+\draw [short] (6,11) -- (5.5,10.25);
+\draw [short] (7,11) -- (6.5,10.25);
+\draw [short] (8,11) -- (7.5,10.25);
+\draw [short] (2.75,12) -- (1.5,11.5);
+\draw [short] (3.25,12.75) -- (1.75,12.25);
+\draw [short] (3.75,13.5) -- (2.25,13);
+\draw [short] (4.25,14.25) -- (2.75,13.75);
+\draw [short] (4.75,15) -- (3.25,14.5);
+\draw [short] (4.75,15) -- (3.25,14.5);
+\draw [short] (5.25,15.75) -- (3.75,15.25);
+\draw [short] (5.75,16.5) -- (4.25,16);
+\node [font=\LARGE] at (1,16) {Surface 2};
+\node [font=\LARGE] at (8,14.5) {Surrounding};
+\node [font=\LARGE] at (1,11) {A};
+\node [font=\LARGE] at (6,18) {B};
+\node [font=\LARGE] at (9.5,11) {C};
+\node [font=\LARGE] at (4.5,9) {};
+\node [font=\LARGE] at (4.5,9) {Surface 1};
+\end{circuitikz}

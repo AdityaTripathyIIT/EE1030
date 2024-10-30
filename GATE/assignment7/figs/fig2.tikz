@@ -1,0 +1,19 @@
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\LARGE]
+\draw [short] (2.25,13.5) -- (8.75,13.5);
+\draw [short] (2.25,12.75) -- (8.75,12.75);
+\draw [short] (2.25,14.5) -- (2.25,12);
+\draw [short] (8.75,14.5) -- (8.75,12);
+\draw [short] (2.25,14.25) .. controls (2,14) and (2,14.25) .. (1.75,13.75);
+\node [font=\LARGE] at (2.5,13.5) {};
+\node [font=\LARGE] at (2.5,13.5) {};
+\draw [short] (2.25,13.5) -- (1.75,13);
+\draw [short] (2.25,12.75) -- (1.75,12.25);
+\draw [short] (8.75,14.25) -- (9.5,14.75);
+\draw [short] (8.75,13.5) -- (9.5,14);
+\draw [short] (8.75,12.5) -- (9.5,13);
+\draw [->, >=Stealth] (6.5,15) -- (6.5,13.5);
+\draw [->, >=Stealth] (6.5,11.5) -- (6.5,12.75);
+\node [font=\LARGE] at (3.5,11.5) {L};
+\node [font=\LARGE] at (6,15.5) {d};
+\end{circuitikz}
