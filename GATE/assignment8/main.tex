@@ -1,0 +1,289 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal,12pt,onecolumn]{IEEEtran}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{amsmath}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{multicol}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+\usepackage{gvv}                                        
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{circuitikz}
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{censor}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{float}
+
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+
+\begin{document}
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+\title{2019-CE-27-39}
+\author{EE24BTECH11001 -  ADITYA TRIPATHY}
+\maketitle
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+
+\begin{enumerate}
+    \item 
+        A one-dimensional domain is discretized into $N$ sub-domains of width $\Delta x$ with node
+        numbers $i = 0, 1, 2, 3, \cdots N$. If the time scale is discretized in steps of $\Delta t$
+        , the forward time and centered-space finite difference approximation at $i^{th}$ node and
+        $n^{th}$ time step, for the partial differential equaivalent 
+        $\frac{\partial v}{\partial t} = \beta \frac{\partial ^2 v}{\partial x^2}$
+        
+        \hfill{\brak{2019-CE}}
+        \begin{enumerate}
+                \item $\frac{v_i ^{\brak{n+1}} - v_i ^{\brak{n}}}{\Delta t} = \beta \sbrak{\frac{v_{i+1}^{\brak{n}} - 2v_i ^{\brak{n}} + v_{i-1}^{\brak{n}}}{\brak{\Delta x}^2}}$
+                \item $\frac{v_{i+1} ^{\brak{n+1}} - v_i ^{\brak{n}}}{\Delta t} = \beta \sbrak{\frac{v_{i+1}^{\brak{n}} - 2v_i ^{\brak{n}} + v_{i-1}^{\brak{n}}}{2\brak{\Delta x}}}$
+                \item $\frac{v_i ^{\brak{n}} - v_i ^{\brak{n-1}}}{\Delta t} = \beta \sbrak{\frac{v_{i+1}^{\brak{n}} - 2v_i ^{\brak{n}} + v_{i-1}^{\brak{n}}}{\brak{\Delta x}^2}}$
+                \item $\frac{v_i ^{\brak{n}} - v_i ^{\brak{n-1}}}{2\Delta t} = \beta \sbrak{\frac{v_{i+1}^{\brak{n}} - 2v_i ^{\brak{n}} + v_{i-1}^{\brak{n}}}{2\brak{\Delta x}}}$
+            \end{enumerate}
+    \item A rectangular open channel has a width of 5$m$ and a bed slope of 0.001. For a uniform
+        flow of depth $2m$, the velocity is $2m/s$. The Manning's roughness coefficient for this channel
+        is
+
+        \hfill{\brak{2019-CE}}
+        \begin{multicols}{4}
+            \begin{enumerate}
+                \item 0.002
+                    \columnbreak
+                \item 0.017
+                    \columnbreak
+                \item 0.033
+                    \columnbreak
+                \item 0.050
+            \end{enumerate}
+        \end{multicols}
+    \item For the following statements:
+        \begin{enumerate}
+            \item[P.] The lateral stress in the soil while being tested in an oedometer is always at rest. 
+            \item[Q.] For a perfectly rigid strip footing at deeper depths in a sand deposit, the vertical
+                normal contact stress at the footing edge is greater that at its centre.
+            \item[R.] The corrections for overburden pressure and dilatency are not applied to measures 
+                SPT-N values in case of clay deposits.
+        \end{enumerate}
+        The corre combination of statements is
+        \hfill{\brak{2019-CE}}
+            \begin{enumerate}
+                \item P-TRUE, Q-TRUE, R-TRUE
+                \item P-FALSE, Q-FALSE, R-TRUE
+                \item P-TRUE, Q-TRUE, R-FALSE
+                \item P-FALSE, Q-FALSE, R-FALSE
+            \end{enumerate}
+    \item Consider two functions: $x = \Psi \ln\phi$ and $y = \phi \ln\Psi$. Which of the following
+        is the correct expression for $\frac{\partial \Psi}{\partial x}$?
+        \hfill{\brak{2019-CE}}
+        \begin{multicols}{4}
+            \begin{enumerate}
+                \item $\frac{x \ln \Psi}{\ln\phi\ln\Psi - 1}$
+                    \columnbreak
+                \item $\frac{x \ln \phi}{\ln\phi\ln\Psi - 1}$
+                    \columnbreak
+                \item $\frac{ \ln \phi}{\ln\phi\ln\Psi - 1}$
+                    \columnbreak
+                \item $\frac{\ln \Psi}{\ln\phi\ln\Psi - 1}$
+            \end{enumerate}
+        \end{multicols}
+    \item The cross-section of a built-up wooden beam as shown in the figure $\brak{\text{not drawn to scale}}$
+        is subjected to a vertical shear force of $8kN$. The beam is a symmetrical about the neutral axis
+        \brak{N.A.} shown, and the moment of inertia about $\brak{N.A.}$ is $1.5 \times 10^9 mm^4$.
+        Considering that the nails at the location $P$ are spaced longitudinally (along the lenghth of the beam)
+        at $60mm$, each of the nails at $P$ will be subjected to the shear force of 
+\begin{center}
+            \resizebox{0.5\textwidth}{!}{
+                \input{figs/fig1.tikz}
+            } 
+        \end{center}
+        \hfill{\brak{2019-CE}}
+        \begin{multicols}{4}
+            \begin{enumerate}
+                \item 0.002
+                    \columnbreak
+                \item 0.017
+                    \columnbreak
+                \item 0.033
+                    \columnbreak
+                \item 0.050
+            \end{enumerate}
+        \end{multicols}
+
+
+    \item The rigid-jointed plane frame $QRS$ shown in the figure is subjected to a load $P$ at the 
+        joint $R$. Let the axial deformations in the frame be neglected. If the support $S$ undergoes
+        a settlement of $\Delta = \frac{PL^3}{\beta EI}$, the vertical reaction at the support $S$
+        will become zero when $\beta$ is equal to 
+\begin{center}
+            \resizebox{0.5\textwidth}{!}{
+                \input{figs/fig2.tikz}
+            } 
+        \end{center}
+        \hfill{\brak{2019-CE}}
+        \begin{multicols}{4}
+            \begin{enumerate}
+                \item 0.1
+                    \columnbreak
+                \item 3.0
+                    \columnbreak
+                \item 7.5
+                    \columnbreak
+                \item 48.0
+            \end{enumerate}
+        \end{multicols}
+
+    \item If the section shown in the figure turns from fully-elastic to fully-plastic, the depth of 
+        neutral axis $\brak{\text{N.A.}}, \vec{y},$ decreases by 
+\begin{center}
+            \resizebox{0.5\textwidth}{!}{
+                \input{figs/fig3.tikz}
+            } 
+        \end{center}
+        \hfill{\brak{2019-CE}}
+ \begin{multicols}{4}
+            \begin{enumerate}
+                \item $10.75mm$
+                    \columnbreak
+                \item $12.25mm$
+                    \columnbreak
+                \item $13.75mm$
+                    \columnbreak
+                \item $15.25mm$
+            \end{enumerate}
+        \end{multicols}
+
+    \item Sedimentation basin in a water treatment plant is designed for a new flow rate of $0.2m^3/s$.
+        The basin is rectangular with a lenght of 32$m$, width of $8m$, and depth of $4m$. Assume that the
+        settling velocity of these particles is governed by Stoke's Law. Given: density of the particles = 
+        $2.5g/cm^3$, density of water = $1 g/cm^3$, dynamic viscosity of water = $0.01 g/cm s$, gravitational
+        acceleration = $980 cm/s$. If the incoming water contains particles of diameter $25 \mu m$ 
+        $\brak{\text{spherical and uniform}}$, the removal efficiency of these particles is
+        \hfill{\brak{2019-CE}}
+     \begin{multicols}{4}
+            \begin{enumerate}
+                \item $51\%$
+                    \columnbreak
+                \item $65\%$
+                    \columnbreak
+                \item $78\%$
+                    \columnbreak
+                \item $100\%$
+            \end{enumerate}
+        \end{multicols}
+
+        
+    \item A survey line was measured to be $285.5m$ with a tape having a nominal length of 30m. On 
+        checking, the true length was found to be $0.05$ too short. If the line lay on a slope of 
+        1 in 10, the reduced length $\brak{\text{horizontal}}$ of the line for plotting of survey work
+        would be
+        \hfill{\brak{2019-CE}}
+        \begin{multicols}{4}
+            \begin{enumerate}
+                \item 283.6m
+                    \columnbreak
+                \item 284.5m
+                    \columnbreak
+                \item 285.0m
+                    \columnbreak
+                \item 285.6m
+            \end{enumerate}
+        \end{multicols}
+\item A 16$mm$ thick gusset is connected to the 12$mm$ thick flange of an I-section using fillet welds on
+    both sides as shown in the figure (not drawn to scale).The gusset plate is subjected to a point load 
+    of $350kN$ acting at a distance of $100mm$ from the flange plate. Size of the fillet weld is 10$mm$.
+    The maximum resultant stress (in MPa, round off to 1 decimal place) on the fillet weld along the vertical plane would be
+        \begin{center}
+            \resizebox{0.5\textwidth}{!}{
+                \input{figs/fig4.tikz}
+            } 
+        \end{center}
+        \hfill{\brak{2019-CE}}
+    \item The network of a small construction project awarded to a contractor is shown in the following
+        figure. The normal duration, crash duration, normal cost, and crash cost of all activities are
+        shown in the table. The indirect cost incurred by the contractor is $INR 5000$ per day.
+        \begin{center}
+            \resizebox{0.5\textwidth}{!}{
+                \input{figs/fig5.tikz}
+            } 
+        \end{center}
+
+        \begin{tabular}{|c|c|c|c|c|}
+                \hline
+                Activity & Normal Duration (days) & Crash Duration (days) & Normal Cost (INR) & Crash Cost (INR)\\
+                \hline
+                P & 6 & 4 & 15000 & 25000\\
+                \hline
+                Q & 5 & 2 & 6000 & 12000\\
+                \hline
+                R & 5 & 3 & 8000 & 9500\\
+                \hline
+                S & 6 & 3 & 7000 & 10000\\
+                \hline
+                T & 3 & 2 & 6000 & 9000\\
+                \hline
+                U & 2 & 1 & 4000 & 6000\\
+                \hline
+                V & 4 & 2 & 20000 & 28000\\
+                \hline
+
+            
+
+        \end{tabular}
+        If the project is tabulated for completion in 16 days, the total cost (in INR) to be incurred 
+        by the contractor would be
+        \hfill{\brak{2019-CE}}
+        
+    \item A box measuring $50cm \times 50cm \times 50cm$ is filled to the top with dry coarse
+        aggregate of mass 187.5$kg$. The water absorption and specific gravity of aggregate are 
+        $0.5\%$ and 2.5 respectivley. The maximum quantity of water (in kg, round off to 2 decimal places)
+        required to fill the box completely
+        \hfill{\brak{2019-CE}}
+         
+    \item A portal frame shown (not drawn to scale) has a hinge support at joint $P$ and a roller
+        support at joint $R$. A point load of $5kN$ is acting at joint $R$ in the horizontal direction. 
+        The flexual rigidity, $EI$, of each member is $10^6 hN/m^2$ . Under the applied load, the horizontal
+        displacement (in mm, round off to 1 decimal place) of joint $R$ would be
+        \begin{center}
+            \resizebox{0.5\textwidth}{!}{
+                \input{figs/fig6.tikz}
+            } 
+        \end{center}
+        \hfill{\brak{2019-CE}}
+
+    
+\end{enumerate}
+\end{document}

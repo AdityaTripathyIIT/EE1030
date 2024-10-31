@@ -1,0 +1,24 @@
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\LARGE]
+\draw [short] (2.75,17.5) -- (2.75,16.5);
+\draw [short] (2.75,17.5) -- (7.25,17.5);
+\draw [short] (7.25,17.5) -- (7.25,16.5);
+\draw [short] (2.75,16.5) -- (4.5,16.5);
+\draw [short] (7.25,16.5) -- (5.75,16.5);
+\draw [short] (5.75,16.5) -- (5.75,13.25);
+\draw [short] (4.5,16.5) -- (4.5,11.75);
+\draw [short] (5.75,13.25) -- (5.75,11.75);
+\draw [short] (5.75,11.75) -- (4.5,11.75);
+\draw [<->, >=Stealth] (7,16.25) -- (7,11.75);
+\draw [<->, >=Stealth] (8,17.5) -- (8,16.5);
+\draw [<->, >=Stealth] (2.75,18) -- (7.75,18);
+\draw [<->, >=Stealth] (2.25,17.5) -- (2.25,14.5);
+\draw [dashed] (3,14.5) -- (7,14.5);
+\node [font=\LARGE] at (1.25,16.25) {y};
+\node [font=\LARGE] at (5,18.5) {60};
+\node [font=\LARGE] at (3.5,15) {N.A.};
+\node [font=\LARGE] at (7.75,14.75) {60};
+\node [font=\LARGE] at (9,17) {5};
+\draw [<->, >=Stealth] (4.5,11.25) -- (5.75,11.25);
+\node [font=\LARGE] at (5,10.5) {5};
+\end{circuitikz}

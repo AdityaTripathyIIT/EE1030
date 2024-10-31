@@ -1,0 +1,36 @@
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\scriptsize]
+\draw [short] (1.5,18.25) -- (1.25,17.75);
+\draw [short] (1.25,17.75) -- (1.75,17.75);
+\draw [short] (1.75,17.75) -- (1.5,18.25);
+\draw [short] (1.5,18.25) -- (5.25,18.25);
+\draw [short] (5.25,18.25) -- (5.25,14);
+\draw [short] (5.25,14) -- (4.75,13.25);
+\draw [short] (4.75,13.25) -- (6,13.25);
+\draw [short] (6,13.25) -- (5.25,14);
+\draw  (5,13) circle (0.25cm);
+\draw  (5.75,13) circle (0.25cm);
+\draw [short] (4.25,12.75) -- (6.5,12.75);
+\draw [short] (4.25,12.75) -- (4.25,12.5);
+\draw [short] (4.5,12.75) -- (4.25,12.5);
+\draw [short] (4.75,12.75) -- (4.5,12.5);
+\draw [short] (5,12.75) -- (4.75,12.5);
+\draw [short] (5.25,12.75) -- (5,12.5);
+\draw [short] (5.5,12.75) -- (5.25,12.5);
+\draw [short] (5.75,12.75) -- (5.5,12.5);
+\draw [short] (6,12.75) -- (5.75,12.5);
+\draw [short] (6,12.75) -- (6.25,12.75);
+\draw [short] (6.25,12.75) -- (6,12.5);
+\draw [short] (6.5,12.75) -- (6.25,12.5);
+\draw [short] (1.25,17.75) -- (1,17.5);
+\draw [short] (1.5,17.75) -- (1.25,17.5);
+\draw [short] (1.75,17.75) -- (1.5,17.5);
+\node [font=\scriptsize] at (1.5,18.5) {P};
+\node [font=\scriptsize] at (3,18.5) {5m};
+\node [font=\scriptsize] at (5,18.5) {Q};
+\node [font=\scriptsize] at (4.75,16) {EI};
+\node [font=\scriptsize] at (4.75,14) {R};
+\node [font=\scriptsize] at (6.75,14) {50 kN};
+\draw [->, >=Stealth] (5.25,14) -- (6.25,14);
+\node [font=\scriptsize] at (5.75,16) {10m};
+\end{circuitikz}
