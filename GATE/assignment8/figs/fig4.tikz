@@ -1,5 +1,5 @@
 \begin{circuitikz}
-\tikzstyle{every node}=[font=\scriptsize]
+\tikzstyle{every node}=[font=\small]
 \draw [short] (2,16.75) -- (2,9.75);
 \draw [short] (2,16.75) -- (2.5,16.75);
 \draw [short] (2.5,16.75) -- (2.5,9.75);
@@ -72,13 +72,13 @@
 \draw [->, >=Stealth] (12.75,12) -- (12.75,15);
 \draw [->, >=Stealth] (11.5,11.5) -- (11,12);
 \draw [->, >=Stealth] (11.5,11.5) -- (12,12);
-\node [font=\scriptsize] at (3.25,13.5) {500mm};
-\node [font=\scriptsize] at (3.25,10.75) {I-Section};
-\node [font=\scriptsize] at (5,15.75) {100mm};
-\node [font=\scriptsize] at (6,17.5) {350 kN};
-\node [font=\scriptsize] at (11.5,11.25) {Fillet Weld};
-\node [font=\scriptsize] at (13.25,13.75) {500mm};
-\node [font=\scriptsize] at (5.75,10) {Flange(12mm thick)};
-\node [font=\scriptsize] at (6.5,10.5) {Fillet weld};
-\node [font=\scriptsize] at (8.5,14) {16mm thick gusset plate};
+\node [font=\small] at (3.25,13.5) {500mm};
+\node [font=\small] at (3.25,10.75) {I-Section};
+\node [font=\small] at (5,15.75) {$\quad 100mm$};
+\node [font=\small] at (6,17.5) {350 kN};
+\node [font=\small] at (11.5,11.25) {$\text{Fillet Weld}$};
+\node [font=\small] at (13.25,13.75) {$\quad 500mm$};
+\node [font=\small] at (5.75,10) {$\quad \quad \text{Flange(12mm thick)}$};
+\node [font=\small] at (6.5,10.5) {$\quad \quad \text{Fillet weld}$};
+\node [font=\small] at (8.5,14) {$\text{16mm gusset plate}$};
 \end{circuitikz}

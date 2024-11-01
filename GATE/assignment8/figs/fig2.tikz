@@ -1,5 +1,5 @@
 \begin{circuitikz}
-\tikzstyle{every node}=[font=\LARGE]
+\tikzstyle{every node}=[font=\small]
 \draw [short] (2.5,18.25) -- (2.5,18.25);
 \draw [short] (1.5,18.75) -- (1.5,17.75);
 \draw [short] (1.5,18.25) -- (6.5,18.25);
@@ -19,12 +19,13 @@
 \draw [short] (1.5,18.5) -- (1.25,18.25);
 \draw [short] (1.5,18.75) -- (1.25,18.5);
 \draw [->, >=Stealth] (6.5,19) -- (6.5,18.5);
-\node [font=\LARGE] at (2,19) {Q};
-\node [font=\LARGE] at (6.5,19.5) {P};
-\node [font=\LARGE] at (8.5,15.75) {L};
-\node [font=\LARGE] at (6,15.75) {EI};
-\node [font=\LARGE] at (6,13.5) {S};
+\node [font=\small] at (2,19) {\small Q};
+\node [font=\small] at (6.5,19.5) {\small P};
+\node [font=\small] at (8.5,15.75) {\small L};
+\node [font=\small] at (6,15.75) {\small EI};
+\node [font=\small] at (4,19) {\small EI};
+\node [font=\small] at (6,13.5) {\small S};
 \draw [<->, >=Stealth] (1.75,12.25) -- (6.5,12.25);
-\node [font=\LARGE] at (6,18.5) {R};
-\node [font=\LARGE] at (3.75,11.75) {L};
+\node [font=\small] at (6,18.5) {\small R};
+\node [font=\small] at (3.75,11.75) {\small L};
 \end{circuitikz}
