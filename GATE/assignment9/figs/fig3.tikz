@@ -1,0 +1,43 @@
+\begin{circuitikz}
+    \tikzstyle{every node}=[font=\normalsize]
+    \draw [->, >=Stealth] (3.25,7.25) -- (3.25,19);
+    \draw [->, >=Stealth] (3.25,13.25) -- (14.75,13.25);
+    \draw [short] (3.25,17) -- (6.25,17);
+    \draw [short] (6.25,17) -- (6.25,10);
+    \draw [short] (6.25,10) -- (9,10);
+    \draw [short] (9,10) -- (9,17);
+    \draw [short] (9,17) -- (11.5,17);
+    \draw [short] (11.5,17) -- (11.5,10);
+    \draw [short] (11.5,10) -- (13.5,10);
+    \draw [short] (13.5,10) -- (13.5,13.25);
+    \draw [<->, >=Stealth] (7.5,13.25) -- (7.5,10);
+    \draw [<->, >=Stealth] (4.75,13.25) -- (4.75,17);
+    \draw [<->, >=Stealth] (10.25,13.25) -- (10.25,17);
+    \draw [<->, >=Stealth] (12.5,13.25) -- (12.5,10);
+    \node [font=\Large, rotate around={90:(0,0)}] at (1.25,14.25) {Roughness height
+    in $\mu m$};
+    \node [font=\normalsize] at (2.75,17) {1};
+    \node [font=\normalsize] at (2.5,13) {0};
+    \node [font=\normalsize] at (2.5,10) {-1};
+    \draw [dashed] (6.25,10) -- (3.25,10);
+    \node [font=\normalsize] at (4,15) {$y_1$};
+    \node [font=\normalsize] at (7,11.5) {$y_2$};
+    \node [font=\normalsize] at (9.5,15.5) {$y_3$};
+    \node [font=\normalsize] at (12,11.5) {$y_4$};
+    \draw [dashed] (9,10) -- (11.5,10);
+    \draw [dashed] (9,17) -- (6.25,17);
+    \draw [dashed] (6.25,10) -- (6.25,7.5);
+    \draw [dashed] (11.5,10) -- (11.5,7.5);
+    \draw [dashed] (13.5,13.25) -- (13.5,17);
+    \draw [dashed] (13.5,17) -- (11.25,17);
+    \draw [<->, >=Stealth] (3.25,9) -- (6,9);
+    \draw [<->, >=Stealth] (6.25,9) -- (8.75,9);
+    \draw [<->, >=Stealth] (9,9) -- (11.25,9);
+    \draw [<->, >=Stealth] (11.5,9) -- (13.5,9);
+    \draw [dashed] (9,10) -- (9,7.75);
+    \draw [dashed] (13.5,10) -- (13.5,7.25);
+    \node [font=\normalsize] at (4.5,8.5) {$\frac{L}{4}$};
+    \node [font=\normalsize] at (10.25,8.5) {$\frac{L}{4}$};
+    \node [font=\normalsize] at (12.5,8.5) {$\frac{L}{4}$};
+    \node [font=\normalsize] at (7.5,8.5) {$\frac{L}{4}$};
+\end{circuitikz}

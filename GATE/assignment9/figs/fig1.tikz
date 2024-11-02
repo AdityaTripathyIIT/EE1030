@@ -1,0 +1,18 @@
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\normalsize]
+\draw [->, >=Stealth] (2.75,11) -- (2.75,17.5);
+\draw [->, >=Stealth] (2.75,11) -- (9.75,11);
+\draw [short] (2.75,11) .. controls (3.75,14.25) and (4.75,14.5) .. (7,15.75);
+\draw [dashed] (7,15.75) -- (2.75,15.75);
+\draw [dashed] (7,15.75) -- (7,11);
+\draw [short] (4.25,11) -- (7,15.75);
+\draw [short] (4.25,14) -- (4,14);
+\draw [short] (4.25,14) -- (4.25,13.75);
+\draw [short] (5.25,12.75) -- (5.25,13);
+\draw [short] (5.25,12.75) -- (5.5,12.75);
+\node [font=\normalsize] at (4,10.5) {0.01};
+\node [font=\normalsize] at (7,10.5) {0.03};
+\node [font=\normalsize, rotate around={90:(0,0)}] at (2,13.25) {stress (MPa)};
+\node [font=\normalsize] at (2,15.5) {200};
+\node [font=\normalsize] at (9.75,10.5) {strain};
+\end{circuitikz}

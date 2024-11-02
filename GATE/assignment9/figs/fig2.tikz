@@ -1,0 +1,10 @@
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\normalsize]
+\draw  (4,17) ellipse (1.5cm and 3.25cm);
+\draw [short] (2.5,17.5) -- (8.25,17.5);
+\draw [->, >=Stealth] (2.5,16.5) -- (4.75,16.5);
+\draw [->, >=Stealth] (8,19.5) -- (7,17.75);
+\draw [->, >=Stealth] (1.5,14.5) -- (2.5,15.75);
+\node [font=\normalsize] at (1.5,14.25) {Generatrix};
+\node [font=\normalsize] at (8,19.75) {Directrix};
+\end{circuitikz}
