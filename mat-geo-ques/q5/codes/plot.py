@@ -37,4 +37,3 @@ ax.set_ylabel('Y')
 ax.set_title('1000 Points on the Line')
 plt.savefig('../figs/fig.png')
 plt.show()
-

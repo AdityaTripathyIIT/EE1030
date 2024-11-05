@@ -15,3 +15,4 @@ void free_ptr(double *points){
     free(points);
 
 }
+
