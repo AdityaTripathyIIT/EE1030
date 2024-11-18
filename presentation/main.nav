@@ -31,8 +31,18 @@
 \headcommand {\beamer@subsectionentry {0}{3}{3}{9}{Graph}}
 \headcommand {\slideentry {3}{3}{1}{9/9}{Graph}{0}}
 \headcommand {\beamer@framepages {9}{9}}
-\headcommand {\beamer@partpages {1}{9}}
 \headcommand {\beamer@subsectionpages {9}{9}}
-\headcommand {\beamer@sectionpages {6}{9}}
-\headcommand {\beamer@documentpages {9}}
-\headcommand {\gdef \inserttotalframenumber {6}}
+\headcommand {\beamer@subsectionentry {0}{3}{4}{10}{C - Code}}
+\headcommand {\slideentry {3}{4}{1}{10/10}{C - Code}{0}}
+\headcommand {\beamer@framepages {10}{10}}
+\headcommand {\slideentry {3}{4}{2}{11/11}{C - Code}{0}}
+\headcommand {\beamer@framepages {11}{11}}
+\headcommand {\slideentry {3}{4}{3}{12/12}{C - Code}{0}}
+\headcommand {\beamer@framepages {12}{12}}
+\headcommand {\slideentry {3}{4}{4}{13/13}{C - Code}{0}}
+\headcommand {\beamer@framepages {13}{13}}
+\headcommand {\beamer@partpages {1}{13}}
+\headcommand {\beamer@subsectionpages {10}{13}}
+\headcommand {\beamer@sectionpages {6}{13}}
+\headcommand {\beamer@documentpages {13}}
+\headcommand {\gdef \inserttotalframenumber {10}}

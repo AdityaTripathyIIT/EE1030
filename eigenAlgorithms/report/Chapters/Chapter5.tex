@@ -1,0 +1,70 @@
+% Chapter Template
+
+\chapter{Rayleigh Quotients and Wilkinson Shifts}
+
+\label{Chapter5} % Change X to a consecutive number
+
+\lhead{Chapter 5. \emph{Rayleigh Quotients and Wilkinson Shift}}
+
+\section{Why Shift?}
+As discussed in previous chapter, the convergence of Hessenberg QR algorithm is proportional to
+$\frac{\lambda_i}{\lambda_j}$. Suppose if the eigenvalues are really close, in that case the algorithm will converge arbitrarily slowly. A way to get around this problem is to take a number
+$\mu$ and perform the QR iterations on $H - \mu I $and add back $\mu I$ to the new RQ matrix. Precisely
+\begin{algorithm}
+    \caption{Demonstration of Shifts}
+    \begin{algorithmic}
+        \STATE $H_k - \mu I$:= QR
+        \STATE $H_{k+1} = RQ + \mu I$
+    \end{algorithmic}
+\end{algorithm}
+
+What this accomplishes is the following:\\ The rate of convergence is now proportional to 
+\begin{align}
+    \frac{|\lambda_i - \mu|}{|\lambda_j - \mu|}\\
+\end{align}
+This increases the rate of convergence and the amount by which the rate increases depends on how close we can get to $\lambda_j$. The problem is that we don't know the eigenvalues (obviously). So the agenda now is to find a way to come up with an on-the-fly way to approximate the eigenvalues in between the iterations
+
+\section{Rayleigh Quotients}
+\subsection{The Method}
+One such heuristic is the Rayleigh quotient shift: Set the shift $\sigma_k$ in the $k^{th}$ step of the QR algorithm equal to the last diagonal element:
+\begin{align}
+    \sigma_k := h_{n,n}^{(k-1})
+\end{align}
+\begin{algorithm}
+\caption{The Hessenberg QR Algorithm with Rayleigh Quotient Shift}
+\begin{algorithmic}[1]
+\STATE Let \(H_0 = H \in \mathbb{C}^{n \times n}\) be an upper Hessenberg matrix. This algorithm computes its Schur normal form \(H = UTU^*\).
+\STATE Initialize \(k := 0\).
+\FOR{\(m = n, n-1, \dots, 2\)}
+    \REPEAT
+        \STATE \(k := k + 1\).
+        \STATE Compute the shift: \(\sigma_k := h^{(k-1)}_{m,m}\).
+        \STATE Factorize \(H_{k-1} - \sigma_k I = Q_kR_k\).
+        \STATE Update \(H_k := R_kQ_k + \sigma_k I\).
+        \STATE Update \(U_k := U_{k-1}Q_k\).
+    \UNTIL{\(|h^{(k)}_{m,m-1}|\) is sufficiently small.}
+\ENDFOR
+\STATE Set \(T := H_k\).
+\end{algorithmic}
+\end{algorithm}
+
+Algorithm 4.4 implements this heuristic. Notice that the shift changes in each iteration step! Notice also that deflation is incorporated in Algorithm 4.4. As soon as the last lower off-diagonal element is sufficiently small, it is declared zero, and the algorithm proceeds with a smaller matrix. In Algorithm 4.4 the "active portion" of the matrix is $m \times m$. One thing which I won't elaborate much on is that implementing Rayleigh shifts achieves what is called quadratic convergence, as compared to the linear convergence of the naive QR algorithm. 
+\subsection{Where Does it Fail?}
+We still haven't addressed the issue of equal eigenvalues. To illustrate this, consider the following matrix
+\begin{align}
+    A = \begin{bmatrix}
+        0 & 1\\
+        1 & 0\\
+    \end{bmatrix}
+\end{align}
+Here the value of $\sigma_k$ will be stuck at 0 since the eigenvalues are -1 and 1 and the algorithm can't choose which way to go, so it slowly decays to nothingness, leaving us with an infinite loop. This is the true reason why Jordan blocks show up. This problem showed up due a symmetry between the eigenvalues and $\sigma_k$. The next method breaks this symmetry and gives us a final method which will converge regardless of the entries in the matrix.
+
+\section{Wilkinson Shift}
+The heuristic chosen by this version is,
+\begin{align}
+    \sigma_k := \text{eigenvalue of} \begin{bmatrix}
+        h_{n-1, n-1}^{(k-1)} & h_{n-1, n}^{(k-1)}\\
+        h_{n, n-1}^{(k-1)} & h_{n, n}^{(k-1)}\\
+    \end{bmatrix}
+\end{align}
+Implementing this gives us our ultimate goal. An algorithm which produces eigenvalues of any arbitrary matrix, complex or not. (Also, as an added bonus it also achieves cubic convergence)

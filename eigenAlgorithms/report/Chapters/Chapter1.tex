@@ -1,0 +1,40 @@
+% Chapter Template
+
+\chapter{Introduction} % Main chapter title
+
+\label{Chapter1}
+
+\lhead{Chapter 1. \emph{Introduction}} % Change X to a consecutive number; this is for the header on each page - perhaps a shortened title
+
+%----------------------------------------------------------------------------------------
+%	SECTION 1
+%----------------------------------------------------------------------------------------
+
+\section{Why is this hard?}
+    Symmetry makes life less complex. This statement is especially true when applied to the problem at hand. The problem of finding eigenvalues is already quite involved in the case of real and symmetric matrices. At least, these symmetric matrices have a guarantee of all eigenvalues being real. In the general case of complex matrices, it becomes mandatory for us to use iterative methods to "converge" to the true eigenvalues.
+    \\
+    The spectrum of algorithms available on the mathematical market can be classified broadly into two categories :
+    \begin{enumerate}
+        \item \textbf{Direct Methods:} Direct methods are typically used on dense matrices and cost
+$O(n^3)$ operations to compute all eigenvalues and eigenvectors; this cost is relatively insensitive to the actual matrix entries.
+        \item \textbf{Iterative Methods: }
+         These are usually applied
+to sparse matrices or matrices for which matrix-vector multiplication is the
+only convenient operation to perform. Iterative methods typically provide
+approximations only to a subset of the eigenvalues and eigenvectors and are
+usually run only long enough to get a few adequately accurate eigenvalues
+rather than a large number. Their convergence properties depend strongly on
+the matrix entries.
+    \end{enumerate}
+    Here I will try and motivate one of the most often used direct algorithms for the task at hand - namely, the QR algorithm.
+
+\section{Design Considerations}
+Before we set out to accomplish our goal to calculate eigenvalues for arbitrary matrices, we must put some thought behind what qualities our "ideal" algorithm should have :
+\begin{enumerate}
+    \item \textbf{Accuracy:} We wouldn't want to waste time and effort implementing an algorithm which doesn't provide the true value of eigenvalues up to a desired precision.
+
+    \item \textbf{Efficiency:} While we need to come to terms with the fact that we can't reap the efficiency rewards of exploiting structure of specific types of matrices, we should strive for the fastest algorithm which gets the job done.
+    \item \textbf{Convergence:} One might argue that this is a subset of the previous design consideration, but it is important enough to point out for itself. Oceans worth of ink has been used to improve convergence properties of various algorithms, so we must also look into this aspect.
+    \item \textbf{Stability:} A slightly more nuanced design consideration. But we want the algorithm not to blow up if we change the entries within the matrix by a relatively small amount.
+
+\end{enumerate}

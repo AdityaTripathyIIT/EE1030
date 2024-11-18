@@ -1,0 +1,37 @@
+% Chapter Template
+
+\chapter{Addressing Convergence Issues}
+
+\label{Chapter4}
+
+\lhead{Chapter 4. \emph{Addressing Convergence Issues}} 
+
+\section{Does the Algorithm Always Converge?}
+At the start of the discussion I talked about the convergence of the QR iteration to an upper triangular matrix "under certain conditions". We will now explore what these conditions are, and when does the convergence fail to occur. 
+\subsection{Necessary Condition For Convergence}
+The iterations will converge in a "reasonable" number of iterations if
+\begin{enumerate}
+    \item If all eigenvalues have distinct absolute values. Precisely, if $\lambda_1, \lambda_2 \cdots \lambda_n$ be the eigenvalues of the matrix, for convergence to occur
+    \begin{align}
+        |\lambda_1| < |\lambda_2|< \cdots < |\lambda_n|
+    \end{align}
+    \item If the ratio of any two eigenvalues is "reasonably"\footnote{See Reference No. 2 for more elaborate discussion} large. Precisely,
+    \begin{align}
+        \frac{\lambda_i}{\lambda_j} >> 1, i \ne j
+    \end{align}
+\end{enumerate}
+
+\subsection{What Happens if Absolute Values are not Unique?}
+The short answer to this question is that you will get $2 \times 2$ blocks called \textbf{Jordan Blocks} where there is a deviation from upper triangular matrix as shown below
+\begin{align}
+    \begin{bmatrix}
+        a_0 & & & &  \\
+         & a_1 & & &  \\
+         & & a_2 & & \\
+         & &  & a_3 &a_4\\
+         & & & a_5& a_6\\
+    \end{bmatrix}
+\end{align}
+To "fix" this problem, we can stop the iterations at some place and check for these blocks and check for these blocks and solve for the eigenvalues of this trivial $2 \times 2$ manually.\\
+
+An elegant solution to the problem comes through this notion of \textbf{shifts} and \textbf{deflation} which will be explored in the next chapter

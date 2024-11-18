@@ -1,0 +1,31 @@
+% Chapter Template
+
+\chapter{Comparison With Other Algorithms} % Main chapter title
+
+\label{Chapter6}
+
+\lhead{Chapter 6. \emph{Comparison With Other Algorithms}} % Change X to a consecutive number; this is for the header on each page - perhaps a shortened title
+
+%----------------------------------------------------------------------------------------
+%	SECTION 1
+%----------------------------------------------------------------------------------------
+
+In true Indian fashion, we shall compare our little algorithm with its cousins and debate which one is the best. Below is a table\footnote{Credits: Wikipedia} which outlines pros and cons of other eigenalgorithms on the market.
+
+\begin{longtable}{|p{2.5cm}|p{3.5cm}|p{3.5cm}|p{2.5cm}|p{2.5cm}|}
+\hline
+\textbf{Algorithm} & \textbf{Pros} & \textbf{Cons} & \textbf{Time Complexity} & \textbf{Conditions} \\ \hline
+\endfirsthead
+\hline
+\textbf{Algorithm} & \textbf{Pros} & \textbf{Cons} & \textbf{Time Complexity} & \textbf{Conditions} \\ \hline
+\endhead
+Householder + Givens & Stable, precise; preserves sparsity. & Complex preprocessing for Hessenberg form. & \( O(n^3) \) & Any square matrix. \\ \hline
+Jacobi Method & Accurate for symmetric matrices; simple. & Slow for non-symmetric matrices; inefficient for large ones. & \( O(n^3) \) (dense) & Symmetric (real/complex). \\ \hline
+Lanczos Algorithm & Efficient for sparse symmetric matrices. & Sensitive to rounding; limited to Hermitian matrices. & \( O(kn^2) \) & Sparse, symmetric/Hermitian. \\ \hline
+QR Algorithm & Robust for eigenvalue computation. & High cost for large dense matrices. & \( O(n^3) \) & Any square matrix. \\ \hline
+Arnoldi Algorithm & Handles non-symmetric sparse matrices. & Requires re-orthogonalization; less stable. & \( O(kn^2) \) & Sparse, any matrix. \\ \hline
+Power Iteration & Simple, finds dominant eigenvalue. & Only computes the largest eigenvalue; slow for close eigenvalues. & \( O(kn^2) \) & Any square matrix. \\ \hline
+\end{longtable}
+
+In conclusion, the algorithm which we chose was the only true algorithm which can compute all eigenvalues of an arbitrary matrix in a time which is less than expected lifetime of the universe.
+

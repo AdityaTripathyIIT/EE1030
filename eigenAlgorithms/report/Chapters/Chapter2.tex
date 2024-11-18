@@ -1,0 +1,87 @@
+% Chapter Template
+
+\chapter{The Basic QR Algorithm}
+
+\label{Chapter2}
+
+\lhead{Chapter 2. \emph{The Basic QR Algorithm}} 
+
+\section{Preliminaries}
+\label{Preliminaries}
+\subsection{Similarity Transformations}
+    \textbf{Definition: } Two matrices $A, B \in \mathbb{C}^{n \times n}$ are said to be similar if there exists an invertible matrix $P \in \mathbb{C}^{n \times n}$ such that
+    \begin{align}
+        B = P^{-1}AP
+    \end{align}
+    Similar matrices represent the same linear map under two (possibly) different bases, with P being the change-of-basis matrix. Because matrices are similar if and only if they represent the same linear operator with respect to (possibly) different bases, similar matrices share all properties of their shared underlying operator like rank, 
+    the characteristic polynomial and by association the eigenvalues and the eigenvectors.
+\subsection{Unitary Matrices}
+    An invertible complex square matrix $U$ is unitary if its matrix inverse $U^{-1}$ equals its conjugate transpose $U^*$, that is, if
+    \begin{align}
+        UU^* = U^*U = I
+    \end{align}
+    where $I$ is the identity matrix.
+\subsection{Schur Decomposition}
+    It allows one to write an arbitrary complex square matrix as unitarily similar to an upper triangular matrix whose diagonal elements are the eigenvalues of the original matrix. If $A \in \mathbb{C}^{n \times n}$ is an $n \times n$ square matrix with complex entries, then A can be expressed as
+    \begin{align}
+        A = QUQ^{-1}
+    \end{align}
+    for some unitary matrix $Q$ (so that the inverse $Q^{-1}$ is also the conjugate transpose $Q^*$ of $Q$), and some upper triangular matrix $U$. Since $U$ is similar to $A$, it has the same spectrum, and since it is triangular, \textbf{its eigenvalues are the diagonal entries of $U$}. It must be noted that all square have a Schur decomposition, although it may not be unique.
+\subsection{Hessenberg Form}
+A Hessenberg matrix is a special kind of square matrix, one that is "almost" triangular. To be exact, an upper Hessenberg matrix has zero entries below the first sub-diagonal, and a lower Hessenberg matrix has zero entries above the first super-diagonal.
+\begin{align}
+    \begin{bmatrix}
+        \times & \times & \times& \times& \times\\
+        \times & \times & \times& \times& \times\\
+        0 & \times & \times& \times& \times\\
+        0 & 0 & \times& \times& \times\\
+        0 & 0 & 0& \times& \times\\
+    \end{bmatrix}
+\end{align}
+\section{The Basic Idea Behind QR}
+    Our primary goal is to get the Schur decomposition of the given matrix and read off the diagonal values to be the eigenvalues.\\
+
+    The QR algorithm works off of the following observation,\\
+    For every matrix $A$ we can represent it as the product of a unitary matrix $Q$ and an upper triangular matrix $R$.
+
+    \begin{align}
+        A_1 &= Q_1R_1\\
+        A_2 &= R_1Q_1 = Q_1^*AQ_1 = Q_2R_2\\
+        A_3 &= R_2Q_2 = Q_2^*Q^*1AQ_1Q_2\\
+        \vdots\\
+        A_{k+1} &= Q_{k-1}^*Q_{k-2}^*\cdots Q_2^*Q_1^*AQ_1Q_2\cdots Q_{k-2}Q_{k-1}
+    \end{align}
+
+    We can see that $A_{k+1}$ is similar to $A_k$. It can be shown that under certain conditions, as we run these iterations, $A_{k+1}$ will converge to an upper triangular matrix\footnote{We will explore this notion in Chapter 4}. So now if we take
+    \begin{align}
+        U = Q_1Q_2\cdots Q_{k-2}Q_{k-1}
+    \end{align}
+    then, 
+    \begin{align}
+        A = U^*A_{\infty}U
+    \end{align}
+    So we have successfully calculated the Schur decomposition of the desired matrix.
+
+\section{Improving the QR Algorithm}
+Two of the major drawbacks of this unoptimized algorithm are as follows:
+\begin{enumerate}
+    \item The convergence of the algorithm is slow. In fact it can be arbitrarily slow if eigenvalues are very close to each other.
+\item The algorithm is expensive. Each iteration step requires the computation of the QR
+factorization of a full $n \times n$ matrix, i.e., each single iteration step has a complexity
+$O(n^3)$. Even if we assume that the number of steps is proportional to $n$ we would
+get an $O(n^4)$ complexity. The latter assumption is not even assured, see point 1 of
+this discussion.
+\end{enumerate}
+Because of the number of arithmetic operations involved, the QR algorithm is practical
+only when applied to a matrix in upper Hessenberg form (i.e., $a_{ij} = 0$ for $i > j + 1$). Hence
+the method consists of two steps. In the first step, we find a similar matrix which is in upper
+Hessenberg form. The second step is then to apply the QR algorithm to this new matrix.
+One can show that if A is in upper Hessenberg form, applying the QR algorithm results in
+a sequence of matrices that are also in this form. 
+
+
+            
+
+
+
+

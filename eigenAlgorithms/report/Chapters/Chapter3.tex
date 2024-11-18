@@ -1,0 +1,176 @@
+% Chapter Template
+
+\chapter{The Hessenberg QR Algorithm} % Main chapter title
+
+\label{Chapter3} % Change X to a consecutive number; for referencing this chapter elsewhere, use \ref{ChapterX}
+
+\lhead{Chapter 3. \emph{The Hessenberg QR Algorithm}} % Change X to a consecutive number; this is for the header on each page - perhaps a shortened title
+
+The flow of this algorithm is as follows:
+\begin{enumerate}
+    \item Convert given matrix to upper Hessenberg form using Householder Reflectors in $O(n^3)$ time complexity.
+    \item Use Givens Rotations to reduce the matrix to upper triangular matrix in $O(n^2)$ time.
+\end{enumerate}
+The motivation to convert to upper Hessenberg form is that the computations are much cheaper and hence faster, which achieves Design Consideration 2.
+\section{Householder Reflectors}
+\textbf{Definition: }A matrix of the form
+\begin{align}
+    P = I - 2\textbf{uu}^*\\
+\end{align}
+is called a Householder reflector.\\
+It is easy to verify that Householder reflectors are Hermitian and that 
+$P^2 = I$. From this
+we deduce that P is unitary. It is clear that we only have to store the Householder
+vector u to be able to multiply a vector (or a matrix) with P,
+\begin{align}
+    P\textbf{x} = \textbf{x} - \textbf{u}(2\textbf{u}^*\textbf{x})\\
+\end{align}
+A task that we repeatedly want to carry out with Householder reflectors is to transform
+a vector \textbf{x} on a multiple of \textbf{$e_1$}
+\begin{align}
+    P\textbf{x} = \textbf{x} - \textbf{u}(2\textbf{u}^*\textbf{x}) = \alpha \textbf{$e_1$}\\
+\end{align}
+Since P is unitary, we must have $\alpha = \rho 
+||\textbf{x}||$, where $\rho \in \mathbb{C}$ has absolute value one. Therefore,
+\begin{align}
+    \textbf{u} = \frac{\textbf{x} - \rho||\textbf{x}||\textbf{$e_1$}}{||\textbf{x} - \rho||\textbf{x}||\textbf{$e_1$}||}
+\end{align}
+We can freely choose $\rho$ provided that $|\rho| = 1$. Let $x_1 = |x_1|e^{i\textbf{$u_k$}^*\phi}$. To avoid numerical
+cancellation we set $\rho = -e^{i\phi}$
+.
+In the real case, one commonly sets $\rho$ = -sign($x_1$). If $x_1 = 0$ we can set $\rho$ in any way.
+\subsection{Algorithm to Convert to Hessenberg Form}
+The main algorithm is as follows
+\begin{algorithm}
+\caption{An algorithm with caption}\label{alg:cap}
+    \begin{algorithmic}
+    \FOR {k = 1 to n - 2}
+        \STATE Generate the Householder reflector $P_k$
+        \STATE $A_{k+1:n, k:n} := A_{k+1:n, k:n} - \textbf{$u_k$}(2\textbf{$u_k$}^*A_{k+1:n, k:n})$
+        \COMMENT{Apply $P_k$ to $A$ from left}
+        \STATE $A_{1:n, k+1:n} := A_{1:n, k+1:n} - 2(A_{1:n, k+1:n}\textbf{$u_k$})\textbf{$u_k$}^*$
+        \COMMENT{Apply $P_k$ to $A$ from right}
+    \ENDFOR
+   \end{algorithmic}
+\end{algorithm}
+
+To get a visualization of the transformation,
+\begin{align}  
+    P_1 = \begin{bmatrix}
+        1 & 0 & 0 & 0 & 0 \\
+        0 & \times & \times& \times& \times\\
+        0 & \times & \times& \times& \times\\
+        0 & \times & \times& \times& \times\\
+        0 & \times & \times& \times& \times\\
+    \end{bmatrix} = \begin{bmatrix}
+        1 & \textbf{0}^{\top}\\
+        \textbf{0} & I_4 - 2u_1u_1^*
+    \end{bmatrix}    
+\end{align}
+\\
+\begin{align}
+    A = \begin{bmatrix}
+        \times & \times & \times& \times& \times\\
+        \times & \times & \times& \times& \times\\
+        \times & \times & \times& \times& \times\\
+        \times & \times & \times& \times& \times\\
+        \times & \times & \times& \times& \times\\
+    \end{bmatrix} \xrightarrow[P_1*]{} \begin{bmatrix}
+        \times & \times & \times& \times& \times\\
+        \times & \times & \times& \times& \times\\
+        0 & \times & \times& \times& \times\\
+        0 & \times & \times& \times& \times\\
+        0 & \times & \times& \times& \times\\
+    \end{bmatrix} \xrightarrow[*P_1]{}  \begin{bmatrix}
+        \times & \times & \times& \times& \times\\
+        \times & \times & \times& \times& \times\\
+        0 & \times & \times& \times& \times\\
+        0 & \times & \times& \times& \times\\
+        0 & \times & \times& \times& \times\\
+    \end{bmatrix}
+\end{align}
+The multiplication of $P_1$ from the left inserts the desired zeros in column 1 of $A$. The
+multiplication from the right is necessary in order to have similarity. Because of the
+nonzero structure of $P_1$ the first column of $P_1A$ is not affected. Hence, the zeros stay
+there.
+\\
+The reduction continues in a similar way:
+\begin{multline}
+    P_1^*AP_1 = \begin{bmatrix}
+        \times & \times & \times& \times& \times\\
+        \times & \times & \times& \times& \times\\
+        0 & \times & \times& \times& \times\\
+        0 & \times & \times& \times& \times\\
+        0 & \times & \times& \times& \times\\
+    \end{bmatrix} \xrightarrow[P_2*/*P_2]{} \begin{bmatrix}
+        \times & \times & \times& \times& \times\\
+        \times & \times & \times& \times& \times\\
+        0 & \times & \times& \times& \times\\
+        0 & 0 & \times& \times& \times\\
+        0 & 0 & \times& \times& \times\\
+    \end{bmatrix} 
+    \xrightarrow[P_3*/*P_3]{} \begin{bmatrix}
+        \times & \times & \times& \times& \times\\
+        \times & \times & \times& \times& \times\\
+        0 & \times & \times& \times& \times\\
+        0 & 0 & \times& \times& \times\\
+        0 & 0 & 0& \times& \times\\
+    \end{bmatrix}\\ = P_3P_2P_1AP_1P_2P_3
+\end{multline}
+\\
+It is worth pointing out that each of the pairs of multiplications by $P_k$ on the right and left are similarity transformations, hence they have no effect on the eigenvalues of the underlying matrix.
+\section{Givens Rotations}
+Givens rotations are used to zero specific elements of a vector or matrix by rotating the vector in the plane of two coordinates. A Givens rotation matrix is defined as:
+\[
+G(i, j, \theta) =
+\begin{bmatrix}
+1 & \cdots & 0 & \cdots & 0 & \cdots & 0 \\
+\vdots & \ddots & \vdots & \ddots & \vdots & \ddots & \vdots \\
+0 & \cdots & c & \cdots & s & \cdots & 0 \\
+\vdots & \ddots & \vdots & \ddots & \vdots & \ddots & \vdots \\
+0 & \cdots & -\overline{s} & \cdots & \overline{c} & \cdots & 0 \\
+\vdots & \ddots & \vdots & \ddots & \vdots & \ddots & \vdots \\
+0 & \cdots & 0 & \cdots & 0 & \cdots & 1
+\end{bmatrix},
+\]
+where 
+\begin{align}
+    c_k = \frac{\overline{x_i}}{\sqrt{|x_i|^2 + |x_j|^2}}\\
+    s_k = \frac{\overline{x_j}}{\sqrt{|x_i|^2 + |x_j|^2}}   
+\end{align}
+Now the algorithm to run one iteration for the upper Hessenberg form is as follows:
+\begin{algorithm}
+\caption{A Hessenberg QR Step}
+\begin{algorithmic}[1]
+\FOR{\(k = 1, 2, \dots, n-1\)}
+    \STATE Generate \(G_k\) and then apply it: \(H := G(k, k+1, \theta_k)^* H\).
+    \STATE Compute: \([c_k, s_k] := \text{givens}(H_{k,k}, H_{k+1,k})\).
+    \STATE Update rows \(k:k+1\): \(H_{k:k+1,k:n} = \begin{bmatrix} c_k & -s_k \\ s_k & c_k \end{bmatrix} H_{k:k+1,k:n}\).
+\ENDFOR
+\FOR{\(k = 1, 2, \dots, n-1\)}
+    \STATE Apply the rotations \(G_k\) from the right:
+    \STATE \(H_{1:k+1,k:k+1} = H_{1:k+1,k:k+1} \begin{bmatrix} c_k & s_k \\ -s_k & c_k \end{bmatrix}\).
+\ENDFOR
+\end{algorithmic}
+\end{algorithm}
+
+\section{Complexity}
+We will now compute time complexities for both the major steps in our Hessenberg QR algorithm:
+\begin{enumerate}
+    \item \textbf{Computing Hessenberg :}
+        \begin{enumerate}
+            \item Application of $P_k$ from the left :
+            $\sum_{k=1}^{n-2}4(n-k-1)(n-k) \approx \frac{4n^3}{3}$ 
+            \item Application of $P_k$ from the right :
+            $\sum_{k=1}^{n-2}4n(n-k) \approx 2n^3$
+        \end{enumerate}
+
+    \item \textbf{Running Givens Rotations: }
+    Neglecting the minimal overhead of calculating $c_k$ and $s_k$, executing the 2 loops in the algorithm costs :
+    \begin{align}
+        2\times\sum_{i=1}^{n-1}6i = 6n(n-1)\approx 6n^2
+    \end{align}
+\end{enumerate}
+
+As we can see, while running the iterations to converge to the Schur decomposition, the Hessenberg algorithm requires $6n^2$ arithmetic computations for each iteration while the naive QR algorithm takes $\frac{7n^3}{3}$ operations.
+

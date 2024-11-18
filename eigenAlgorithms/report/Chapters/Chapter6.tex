@@ -1,0 +1,53 @@
+% Chapter Template
+
+\chapter{Final Form of the Algorithm} % Main chapter title
+
+\label{Chapter6}
+
+\lhead{Chapter 6. \emph{Final Form of the Algorithm}} % Change X to a consecutive number; this is for the header on each page - perhaps a shortened title
+
+%----------------------------------------------------------------------------------------
+%	SECTION 1
+%----------------------------------------------------------------------------------------
+
+\begin{algorithm}
+\caption{Eigenvalue Calculation}
+\begin{algorithmic}
+\STATE To Upper Hessenberg form (via Householder reflection):
+    \FOR{$k = 1$ TO $n-2$}
+        \STATE Compute Householder reflector $P_k$ 
+        \STATE Update $A$: $A = P_k A P_k^T$
+    \ENDFOR
+
+\STATE QR Iterations (via Givens Rotation):
+\WHILE{$h_{n,n} > \epsilon$}
+        \FOR{$k = 1$ TO $n-1$}
+            \STATE Compute Givens rotation matrix $G_k$ to zero out the $(k+1, k)$ element.
+            \STATE Apply $G_k$ from the left and right to $A$.
+        \ENDFOR
+    \STATE Form $A = R Q$
+\ENDWHILE
+\STATE Extract Eigenvalues from Quasi-Triangular Matrix
+\FOR{$i = 1$ TO $n$}
+        \IF{$|A_{i+1, i}| < \epsilon$}
+            \STATE Eigenvalue: $\lambda_i = A_{i, i}$
+        \ELSE
+            \STATE Compute eigenvalues of the $2 \times 2$ sub-matrix by solving quadratic:
+            \begin{align*}
+            \begin{bmatrix}
+                A_{i, i} & A_{i, i+1} \\
+                A_{i+1, i} & A_{i+1, i+1}
+            \end{bmatrix}
+            \end{align*}
+        \ENDIF
+    \ENDFOR
+\RETURN Eigenvalues $\lambda_1, \lambda_2,\cdots, \lambda_n$
+\end{algorithmic}
+\end{algorithm}
+
+
+
+
+
+
+
